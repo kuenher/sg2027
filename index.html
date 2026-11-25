@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2027 何嘉仁新加坡自信成長營 | HESS Singapore Camp Confidence</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦁</text></svg>">
+    <meta name="description" content="2027 何嘉仁新加坡自信成長營：2027/7/25–7/30，六天五夜。營隊理念、師資與食宿、六日行程、魚尾獅接水遊戲、12 個遊學景點與 2026 學員回饋。">
+    <meta property="og:title" content="2027 何嘉仁新加坡自信成長營">
+    <meta property="og:description" content="Independent. Curious. Confident. 2027/7/25–7/30 六天五夜">
+    <meta property="og:image" content="img/hero-09-supertrees.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Kalam:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lionRed: '#A8322D',
+                        inkBrown: '#3E2A24',
+                        sunYellow: '#F5D46F',
+                        softYellow: '#FDF0C8',
+                        palmGreen: '#2F7D5B',
+                        bayBlue: '#3E9FB8',
+                        creamBg: '#FBF5EA'
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans TC"', 'sans-serif'],
+                        script: ['Kalam', 'cursive']
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body {
+            background-color: #FBF5EA;
+            color: #3E2A24;
+            overflow-x: hidden;
+            font-family: "Noto Sans TC", sans-serif;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+        [data-content-panel], #section-tabs { scroll-margin-top: 64px; }
+
+        /* 頂欄 */
+        .bar-link { position: relative; }
+        .bar-link.is-active { color: #A8322D; }
+        .bar-link.is-active::after {
+            content: ""; position: absolute; left: 10px; right: 10px; bottom: 0;
+            height: 3px; border-radius: 3px; background: #A8322D;
+        }
+        .panel-btn.is-active {
+            background: #A8322D !important; color: #fff !important; border-color: #A8322D !important;
+            box-shadow: 3px 3px 0 #F5D46F;
+        }
+
+        /* Hero 輪播 */
+        .hero-viewport { position: relative; overflow: hidden; border-radius: 28px; border: 3px solid #3E2A24; box-shadow: 6px 6px 0 #F5D46F; background: #3E2A24; touch-action: pan-y; }
+        .hero-track { display: flex; transition: transform .7s cubic-bezier(.22,.8,.3,1); }
+        .hero-slide { position: relative; flex: 0 0 100%; aspect-ratio: 16 / 9; }
+        @media (max-width: 640px) { .hero-slide { aspect-ratio: 4 / 3; } }
+        .hero-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .hero-caption {
+            position: absolute; left: 14px; bottom: 14px; padding: 4px 14px; border-radius: 999px;
+            background: rgba(251,245,234,.94); color: #A8322D; font-weight: 700; font-size: 15px;
+            border: 2px solid #A8322D;
+        }
+        .hero-arrow {
+            position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border-radius: 999px;
+            background: rgba(251,245,234,.92); color: #A8322D; font-size: 22px; font-weight: 900; border: 2px solid #A8322D;
+            display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 2;
+        }
+        .hero-arrow.prev { left: 12px; } .hero-arrow.next { right: 12px; }
+        .hero-dots { display: flex; gap: 6px; justify-content: center; margin-top: 12px; flex-wrap: wrap; }
+        .hero-dot { width: 10px; height: 10px; border-radius: 999px; background: rgba(168,50,45,.25); border: 0; cursor: pointer; transition: all .3s; }
+        .hero-dot.is-active { width: 28px; background: #A8322D; }
+
+        /* 卡片 */
+        .card { background: #fff; border: 2px solid rgba(62,42,36,.12); border-radius: 22px; }
+        .card-pop { box-shadow: 4px 4px 0 #F5D46F; border: 2px solid #3E2A24; }
+        .card-pop-green { box-shadow: 4px 4px 0 #2F7D5B; border: 2px solid #3E2A24; }
+        .photo { border-radius: 18px; overflow: hidden; border: 2px solid #3E2A24; background: #eee; }
+        .photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s; }
+        .photo:hover img { transform: scale(1.04); }
+        .section-kicker { letter-spacing: .14em; font-weight: 900; font-size: 13px; color: #2F7D5B; }
+
+        /* 翻翻卡 */
+        .flip { perspective: 1200px; cursor: pointer; }
+        .flip-inner { position: relative; width: 100%; aspect-ratio: 3 / 4; transition: transform .7s; transform-style: preserve-3d; }
+        .flip.is-flipped .flip-inner { transform: rotateY(180deg); }
+        .flip-face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: 20px; overflow: hidden; border: 3px solid #3E2A24; }
+        .flip-front { background: #fff; padding: 10px 10px 0; box-shadow: 4px 4px 0 #F5D46F; }
+        .flip-front .pic { height: 74%; border-radius: 12px; overflow: hidden; }
+        .flip-front .pic img { width: 100%; height: 100%; object-fit: cover; }
+        .flip-back { transform: rotateY(180deg); background: #FDF0C8; padding: 20px; display: flex; flex-direction: column; box-shadow: 4px 4px 0 #2F7D5B; }
+        .stamp { position: absolute; top: 18px; right: 18px; background: #A8322D; color: #fff; font-size: 12px; font-weight: 900; padding: 2px 10px; border-radius: 999px; transform: rotate(6deg); }
+
+        /* 時間軸 */
+        .tl-day { position: relative; }
+        .day-badge { font-family: Kalam, cursive; }
+
+        /* 影片 */
+        .video-wrap { position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: 22px; overflow: hidden; border: 3px solid #3E2A24; box-shadow: 6px 6px 0 #F5D46F; background: #000; }
+        .video-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+        /* 遊戲 */
+        #merlion-canvas { touch-action: none; }
+        .ctrl-btn { touch-action: manipulation; user-select: none; -webkit-user-select: none; }
+
+        /* 開場飛機 */
+        .plane-intro { position: fixed; inset: 0; pointer-events: none; z-index: 60; overflow: hidden; }
+        .plane-runner { position: absolute; top: 18%; left: -160px; animation: plane-cross 2.8s cubic-bezier(.45,.05,.4,1) forwards; }
+        .plane-runner svg { width: 120px; height: auto; filter: drop-shadow(0 6px 8px rgba(0,0,0,.18)); }
+        .plane-trail { position: absolute; right: 100%; top: 50%; width: 260px; height: 4px; border-radius: 4px; background: linear-gradient(90deg, rgba(168,50,45,0), rgba(168,50,45,.55)); }
+        @keyframes plane-cross { 0% { transform: translate(0,40px) rotate(-6deg); } 100% { transform: translate(calc(100vw + 340px), -60px) rotate(-10deg); } }
+        @media (prefers-reduced-motion: reduce) { .hero-track, .flip-inner { transition: none; } }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+<!-- 頂欄 -->
+<header id="top-bar" class="sticky top-0 z-40 h-12 bg-creamBg/95 backdrop-blur border-b-2 border-lionRed/15">
+    <div class="max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3">
+        <a href="#top" class="font-black text-lionRed text-[16px] whitespace-nowrap flex items-center gap-1.5">
+            <span class="font-script text-[20px] leading-none">Singapore</span><span>2027 自信成長營</span>
+        </a>
+        <nav aria-label="單元" class="hidden lg:flex items-stretch h-full gap-1 text-[15px] font-bold">
+            <button type="button" data-panel-btn="spirit" class="bar-link is-active px-2.5 h-full text-inkBrown hover:text-lionRed cursor-pointer">營隊理念</button>
+            <button type="button" data-panel-btn="team" class="bar-link px-2.5 h-full text-inkBrown hover:text-lionRed cursor-pointer">師資與食宿</button>
+            <button type="button" data-panel-btn="courses" class="bar-link px-2.5 h-full text-inkBrown hover:text-lionRed cursor-pointer">六日行程</button>
+            <button type="button" data-panel-btn="game" class="bar-link px-2.5 h-full text-inkBrown hover:text-lionRed cursor-pointer">接水遊戲</button>
+            <button type="button" data-panel-btn="spots" class="bar-link px-2.5 h-full text-inkBrown hover:text-lionRed cursor-pointer">遊學景點</button>
+            <button type="button" data-panel-btn="feedback" class="bar-link px-2.5 h-full text-inkBrown hover:text-lionRed cursor-pointer">學生回饋</button>
+        </nav>
+        <div class="relative lg:hidden">
+            <button id="menu-btn" type="button" aria-expanded="false" aria-controls="menu-sheet" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-lionRed text-white text-[15px] font-bold cursor-pointer">☰ <span>單元</span></button>
+            <div id="menu-sheet" class="hidden absolute right-0 top-11 w-60 rounded-2xl bg-white border-2 border-lionRed shadow-[4px_4px_0px_#F5D46F] p-2">
+                <button type="button" data-panel-btn="spirit" class="menu-item w-full text-left px-3 py-2.5 rounded-xl text-base font-bold text-inkBrown hover:bg-creamBg cursor-pointer">營隊理念與新加坡優勢</button>
+                <button type="button" data-panel-btn="team" class="menu-item w-full text-left px-3 py-2.5 rounded-xl text-base font-bold text-inkBrown hover:bg-creamBg cursor-pointer">師資、住宿與交通</button>
+                <button type="button" data-panel-btn="courses" class="menu-item w-full text-left px-3 py-2.5 rounded-xl text-base font-bold text-inkBrown hover:bg-creamBg cursor-pointer">課程與六日行程</button>
+                <button type="button" data-panel-btn="game" class="menu-item w-full text-left px-3 py-2.5 rounded-xl text-base font-bold text-inkBrown hover:bg-creamBg cursor-pointer">魚尾獅接水挑戰</button>
+                <button type="button" data-panel-btn="spots" class="menu-item w-full text-left px-3 py-2.5 rounded-xl text-base font-bold text-inkBrown hover:bg-creamBg cursor-pointer">遊學景點翻翻卡</button>
+                <button type="button" data-panel-btn="feedback" class="menu-item w-full text-left px-3 py-2.5 rounded-xl text-base font-bold text-inkBrown hover:bg-creamBg cursor-pointer">學生回饋與成果</button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div id="top" class="w-full h-2 flex shrink-0"><div class="flex-1 bg-lionRed"></div><div class="flex-1 bg-sunYellow"></div><div class="flex-1 bg-palmGreen"></div><div class="flex-1 bg-bayBlue"></div></div>
+
+<!-- Hero -->
+<section id="hero" class="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-10">
+    <div class="grid lg:grid-cols-12 gap-6 lg:gap-10 items-center">
+        <div class="lg:col-span-5">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-softYellow border-2 border-lionRed/30 text-lionRed font-bold text-[15px]">
+                ✈️ 2027/7/25(日) – 7/30(五)，六天五夜
+            </div>
+            <p class="font-script text-lionRed text-5xl sm:text-6xl mt-4 leading-none">Singapore</p>
+            <h1 class="mt-3 text-3xl sm:text-5xl font-black text-lionRed leading-tight">2027 何嘉仁<br>新加坡自信成長營</h1>
+            <p class="mt-3 text-lg font-bold text-inkBrown">HESS Singapore Camp Confidence</p>
+            <p class="text-palmGreen font-bold tracking-wide">Independent. Curious. Confident.</p>
+            <p class="mt-4 text-[16px] text-inkBrown/85">對象：THC / TH+ / ESL 8 級以上或 IA 之 HESS 學員</p>
+        </div>
+        <div class="lg:col-span-7">
+            <div id="hero-viewport" class="hero-viewport">
+                <div id="hero-track" class="hero-track">
+                    <figure class="hero-slide"><img src="img/hero-01-changi.jpg" alt="2026 新加坡營學員拉著營隊布條在機場集合"><figcaption class="hero-caption">2026 新加坡營 • 出發！機場集合</figcaption></figure>
+                    <figure class="hero-slide"><img src="img/hero-02-jewel.jpg" alt="學員在星耀樟宜雨漩渦前合影" loading="lazy"><figcaption class="hero-caption">2026 新加坡營 • 星耀樟宜雨漩渦</figcaption></figure>
+                    <figure class="hero-slide"><img src="img/hero-03-sultan-mosque.jpg" alt="學員在阿拉伯街蘇丹回教堂前拉布條合影" loading="lazy"><figcaption class="hero-caption">2026 新加坡營 • 阿拉伯街蘇丹回教堂</figcaption></figure>
+                    <figure class="hero-slide"><img src="img/hero-04-museum.jpg" alt="學員在博物館互動展區合影" loading="lazy"><figcaption class="hero-caption">2026 新加坡營 • 博物館互動展</figcaption></figure>
+                    <figure class="hero-slide"><img src="img/hero-05-city-night.jpg" alt="學員在克拉碼頭夜晚城市探索" loading="lazy"><figcaption class="hero-caption">2026 新加坡營 • 克拉碼頭夜遊</figcaption></figure>
+                    <figure class="hero-slide"><img src="img/hero-06-hydroponic.jpg" alt="學員參觀科技水耕農場" loading="lazy"><figcaption class="hero-caption">2026 新加坡營 • 科技水耕農場</figcaption></figure>
+                    <figure class="hero-slide"><img src="img/hero-07-rainforest.jpg" alt="學員穿雨衣走過雨林吊橋" loading="lazy"><figcaption class="hero-caption">2026 新加坡營 • 雨林吊橋探險</figcaption></figure>
+                    <figure class="hero-slide"><img src="img/hero-08-uss.jpg" alt="學員在環球影城開心合影" loading="lazy"><figcaption class="hero-caption">2026 新加坡營 • 環球影城歡樂日</figcaption></figure>
+                    <figure class="hero-slide"><img src="img/hero-09-supertrees.jpg" alt="學員在濱灣花園超級樹下拉布條合影" loading="lazy"><figcaption class="hero-caption">2026 新加坡營 • 濱灣花園超級樹</figcaption></figure>
+                    <figure class="hero-slide"><img src="img/hero-10-gardens.jpg" alt="學員在 Gardens by the Bay 標誌前合影" loading="lazy"><figcaption class="hero-caption">2026 新加坡營 • Gardens by the Bay</figcaption></figure>
+                    <figure class="hero-slide"><img src="img/hero-11-certificates.jpg" alt="學員拿著結業證書與老師合影" loading="lazy"><figcaption class="hero-caption">2026 新加坡營 • 結業證書</figcaption></figure>
+                    <figure class="hero-slide"><img src="img/hero-12-farewell.jpg" alt="學員在樟宜機場拉布條合影準備返台" loading="lazy"><figcaption class="hero-caption">2026 新加坡營 • 帶著回憶回家</figcaption></figure>
+                </div>
+                <button id="hero-prev" class="hero-arrow prev" type="button" aria-label="上一張">‹</button>
+                <button id="hero-next" class="hero-arrow next" type="button" aria-label="下一張">›</button>
+            </div>
+            <div id="hero-dots" class="hero-dots" aria-label="輪播圓點"></div>
+        </div>
+    </div>
+
+    <!-- 單元按鈕 -->
+    <nav id="section-tabs" aria-label="單元選擇" class="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5">
+        <button type="button" data-panel-btn="spirit" class="panel-btn is-active px-3 py-3 rounded-2xl bg-white text-inkBrown border-2 border-inkBrown/30 text-[15px] sm:text-base font-bold leading-snug transition-all cursor-pointer">🦁 營隊理念與<br class="sm:hidden">新加坡優勢</button>
+        <button type="button" data-panel-btn="team" class="panel-btn px-3 py-3 rounded-2xl bg-white text-inkBrown border-2 border-inkBrown/30 text-[15px] sm:text-base font-bold leading-snug transition-all cursor-pointer">🏨 師資、住宿<br class="sm:hidden">與交通</button>
+        <button type="button" data-panel-btn="courses" class="panel-btn px-3 py-3 rounded-2xl bg-white text-inkBrown border-2 border-inkBrown/30 text-[15px] sm:text-base font-bold leading-snug transition-all cursor-pointer">🗓️ 課程與<br class="sm:hidden">六日行程</button>
+        <button type="button" data-panel-btn="game" class="panel-btn px-3 py-3 rounded-2xl bg-white text-inkBrown border-2 border-inkBrown/30 text-[15px] sm:text-base font-bold leading-snug transition-all cursor-pointer">💦 魚尾獅<br class="sm:hidden">接水挑戰</button>
+        <button type="button" data-panel-btn="spots" class="panel-btn px-3 py-3 rounded-2xl bg-white text-inkBrown border-2 border-inkBrown/30 text-[15px] sm:text-base font-bold leading-snug transition-all cursor-pointer">📮 遊學景點<br class="sm:hidden">翻翻卡</button>
+        <button type="button" data-panel-btn="feedback" class="panel-btn px-3 py-3 rounded-2xl bg-white text-inkBrown border-2 border-inkBrown/30 text-[15px] sm:text-base font-bold leading-snug transition-all cursor-pointer">⭐ 學生回饋<br class="sm:hidden">與成果</button>
+    </nav>
+</section>
+
+<main id="dynamic-content-area" class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
+
+    <!-- ========== 1. 營隊理念 ========== -->
+    <section id="panel-spirit" data-content-panel="spirit" class="space-y-10">
+        <div class="grid lg:grid-cols-2 gap-8 items-center">
+            <div>
+                <p class="section-kicker">CAMP SPIRIT 營隊理念</p>
+                <h2 class="text-2xl sm:text-3xl font-black text-lionRed mt-1">在獅城學會獨立、好奇與自信</h2>
+                <p class="mt-4">在旅途中學會獨立與勇敢，於感恩與珍惜中逐漸歷練成長。由何嘉仁教學團隊與 Hess Academy 新加坡團隊共同規劃，透過<strong class="text-lionRed">專題式學習、城市探索與跨文化互動</strong>，讓學員在真實情境中使用英語、解決問題、展現領導力，帶著自信與夢想，走向更遼闊的世界。</p>
+                <div class="mt-5 flex flex-wrap gap-2">
+                    <span class="px-3 py-1 rounded-full bg-lionRed text-white font-bold text-sm">Independent 獨立</span>
+                    <span class="px-3 py-1 rounded-full bg-palmGreen text-white font-bold text-sm">Curious 好奇</span>
+                    <span class="px-3 py-1 rounded-full bg-sunYellow text-inkBrown font-bold text-sm">Confident 自信</span>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+                <div class="photo aspect-[4/3]"><img src="img/spirit-teamwork.jpg" alt="學員分組合作完成任務" loading="lazy"></div>
+                <div class="photo aspect-[4/3]"><img src="img/spirit-explore.jpg" alt="學員在機場出發準備探索" loading="lazy"></div>
+                <div class="photo aspect-[4/3]"><img src="img/spirit-airport.jpg" alt="學員在候機室合影" loading="lazy"></div>
+                <div class="photo aspect-[4/3]"><img src="img/spirit-class.jpg" alt="學員專注上課" loading="lazy"></div>
+            </div>
+        </div>
+
+        <!-- 營隊資訊 -->
+        <div>
+            <p class="section-kicker">CAMP INFO 營隊資訊</p>
+            <div class="mt-3 grid sm:grid-cols-3 gap-4">
+                <div class="card card-pop p-5"><p class="text-lionRed font-black text-lg">📅 日期 DATE</p><p class="mt-1 font-bold">2027/7/25(日) – 7/30(五)</p><p class="text-inkBrown/75">六天五夜</p></div>
+                <div class="card card-pop p-5"><p class="text-lionRed font-black text-lg">🎒 對象 AUDIENCE</p><p class="mt-1 font-bold">THC / TH+ / ESL 8 級以上或 IA</p><p class="text-inkBrown/75">之 HESS 學員</p></div>
+                <div class="card card-pop p-5"><p class="text-lionRed font-black text-lg">👩‍🏫 帶團配置 TEAM</p><p class="mt-1 font-bold">師生比 1 : 7</p><p class="text-inkBrown/75">外籍、中籍、新加坡籍教師各 1 名</p></div>
+            </div>
+        </div>
+
+        <!-- 九大特色 -->
+        <div>
+            <p class="section-kicker">CAMP FEATURES 營隊特色</p>
+            <h3 class="text-xl sm:text-2xl font-black text-lionRed mt-1">九大成長關鍵字</h3>
+            <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div class="card p-4"><p class="font-black text-lionRed">Project-based Learning</p><p class="text-sm">專題式學習</p></div>
+                <div class="card p-4 bg-softYellow"><p class="font-black text-lionRed">Solve Problems</p><p class="text-sm">解決問題</p></div>
+                <div class="card p-4"><p class="font-black text-lionRed">Demonstrate Leadership</p><p class="text-sm">展現領導力</p></div>
+                <div class="card p-4 bg-softYellow"><p class="font-black text-lionRed">Exploration Activities</p><p class="text-sm">豐富活動</p></div>
+                <div class="card p-4"><p class="font-black text-lionRed">Show Courage &amp; Bravery</p><p class="text-sm">展現勇氣</p></div>
+                <div class="card p-4 bg-softYellow"><p class="font-black text-lionRed">Interact with Local People</p><p class="text-sm">與當地居民互動</p></div>
+                <div class="card p-4"><p class="font-black text-lionRed">Travel Log</p><p class="text-sm">城市探索影像紀錄</p></div>
+                <div class="card p-4 bg-softYellow"><p class="font-black text-lionRed">Discover New Things</p><p class="text-sm">探索新事物</p></div>
+                <div class="card p-4"><p class="font-black text-lionRed">Work as a Team</p><p class="text-sm">團隊合作</p></div>
+            </div>
+        </div>
+
+        <!-- 為什麼到新加坡 -->
+        <div class="grid lg:grid-cols-12 gap-6 items-start">
+            <div class="lg:col-span-7">
+                <p class="section-kicker">WHY SINGAPORE</p>
+                <h2 class="text-2xl sm:text-3xl font-black text-lionRed mt-1">為什麼到新加坡學習？</h2>
+                <p class="mt-2 text-inkBrown/85">安全、現代且高度國際化的城市國家，是在真實情境中學英語、看世界的最佳教室。</p>
+                <div class="mt-4 grid sm:grid-cols-2 gap-4">
+                    <div class="card card-pop-green p-5"><p class="text-3xl font-black text-palmGreen">01</p><p class="font-black text-lg text-lionRed">安全、現代、國際化</p><p class="text-[15px] mt-1">治安良好、交通便利，是東南亞重要的交通、貿易與國際交流樞紐。</p></div>
+                    <div class="card card-pop-green p-5"><p class="text-3xl font-black text-palmGreen">02</p><p class="font-black text-lg text-lionRed">真實情境的英語環境</p><p class="text-[15px] mt-1">英語是共同語言，學員在城市任務、訪談與購物中自然開口說英文。</p></div>
+                    <div class="card card-pop-green p-5"><p class="text-3xl font-black text-palmGreen">03</p><p class="font-black text-lg text-lionRed">多元文化交會</p><p class="text-[15px] mt-1">華人、馬來人、印度人及歐美人士共同生活，一天就能走遍多種文化街區。</p></div>
+                    <div class="card card-pop-green p-5"><p class="text-3xl font-black text-palmGreen">04</p><p class="font-black text-lg text-lionRed">優質教育與花園城市</p><p class="text-[15px] mt-1">在 PISA 等國際評量長期名列前茅；都市發展與綠化並進，展現永續生活。</p></div>
+                </div>
+            </div>
+            <div class="lg:col-span-5 space-y-4">
+                <div class="photo aspect-square"><img src="img/illus-about.jpg" alt="新加坡多元文化插畫：魚尾獅、濱海灣金沙與家庭" loading="lazy"></div>
+                <div class="card p-5 bg-softYellow">
+                    <p class="font-black text-lionRed">關於新加坡 ABOUT SINGAPORE</p>
+                    <p class="text-[15px] mt-1">位於馬來半島最南端，由本島與周邊島嶼組成，是城市、國家與島嶼合一的城市型國家，素有「獅城」與「花園城市」之稱。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 冷知識 -->
+        <div>
+            <p class="section-kicker">FUN FACTS 新加坡冷知識</p>
+            <div class="mt-3 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="card p-5"><p class="text-3xl">🦁</p><p class="font-black text-lionRed mt-1">魚尾獅 Merlion</p><p class="text-[15px]">獅頭魚身，1964 年設計。獅頭代表「獅子城」，魚尾象徵從漁村發展而來的海洋歷史。</p></div>
+                <div class="card p-5"><p class="text-3xl">🍗</p><p class="font-black text-lionRed mt-1">國民美食</p><p class="text-[15px]">海南雞飯在新加坡被普遍奉為國菜，小販中心更是品嚐在地美食的最佳去處。</p></div>
+                <div class="card p-5"><p class="text-3xl">🏛️</p><p class="font-black text-lionRed mt-1">1965 年獨立</p><p class="text-[15px]">1819 年萊佛士建立貿易據點；1963 年加入馬來西亞，1965 年獨立建國。</p></div>
+                <div class="card p-5"><p class="text-3xl">💧</p><p class="font-black text-lionRed mt-1">新生水與海水淡化</p><p class="text-[15px]">新生水約供應全國 40% 用水，目標 2060 年達 55%，爭取水資源自主。</p></div>
+            </div>
+        </div>
+
+        <div class="flex justify-end"><button type="button" data-next-panel="team" class="px-5 py-3 rounded-2xl bg-lionRed text-white font-black shadow-[3px_3px_0px_#F5D46F] cursor-pointer">繼續探索：師資、住宿與交通 →</button></div>
+    </section>
+
+    <!-- ========== 2. 師資與食宿 ========== -->
+    <section id="panel-team" data-content-panel="team" class="hidden space-y-10">
+        <div>
+            <p class="section-kicker">YOUR CAMP TEAM 帶團老師</p>
+            <h2 class="text-2xl sm:text-3xl font-black text-lionRed mt-1">HESS 帶團老師 × Hess Academy 新加坡團隊</h2>
+            <div class="mt-5 grid lg:grid-cols-12 gap-5 items-stretch">
+                <div class="lg:col-span-5 card card-pop p-5 flex gap-4 items-center">
+                    <img src="img/illus-kelsey.jpg" alt="Kelsey Fernandes 插畫頭像" class="w-28 h-28 sm:w-36 sm:h-36 rounded-full border-4 border-sunYellow object-cover shrink-0" loading="lazy">
+                    <div>
+                        <p class="font-black text-xl text-lionRed">Kelsey Fernandes</p>
+                        <p class="text-[15px] font-bold">HESS Junior Diplomats Teacher</p>
+                        <p class="text-[15px]">何嘉仁明水分校外師主管</p>
+                    </div>
+                </div>
+                <div class="lg:col-span-7 card p-5 bg-softYellow">
+                    <p class="font-black text-xl text-lionRed">Hess Academy Singapore（Hess 新加坡分校）</p>
+                    <ul class="mt-2 space-y-1 text-[16px] list-disc pl-5">
+                        <li>教師畢業於新加坡國立教育學院、新加坡管理大學、倫敦政經學院等知名學府</li>
+                        <li>教師群擁有 10 年以上教學經驗</li>
+                        <li>於 Hess Academy 進行歷史文化、科學科技、環境永續三堂主題課</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-4 rounded-2xl bg-lionRed text-white font-black text-center px-4 py-4 text-lg">帶團教師配置 (1:7)：外籍、中籍、新加坡籍教師各 1 名</div>
+            <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div class="photo aspect-[4/3]"><img src="img/team-class-1.jpg" alt="學員在 Hess Academy 上課" loading="lazy"></div>
+                <div class="photo aspect-[4/3]"><img src="img/team-class-3.jpg" alt="學員使用筆電進行 AI Workshop" loading="lazy"></div>
+                <div class="photo aspect-[4/3]"><img src="img/team-class-2.jpg" alt="學員認真寫學習單" loading="lazy"></div>
+            </div>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-5">
+            <div class="card card-pop p-5">
+                <p class="text-2xl">🏨</p>
+                <p class="font-black text-xl text-lionRed">住宿安排</p>
+                <p class="font-bold mt-1">Aqueen Prestige Hotel Jalan Besar（雅詩閣尊貴酒店）</p>
+                <ul class="mt-2 text-[15px] space-y-1 list-disc pl-5">
+                    <li>位於市中心，交通便利、環境整潔新穎</li>
+                    <li>師生同樓層住宿，提升管理與安全性</li>
+                    <li>房型無陽台設計，更加安心</li>
+                    <li>館內設有空間，進行每日活動回顧與交流</li>
+                </ul>
+            </div>
+            <div class="card card-pop p-5">
+                <p class="text-2xl">🍜</p>
+                <p class="font-black text-xl text-lionRed">餐食安排</p>
+                <p class="mt-1 text-[15px]">營隊期間提供三餐，兼顧營養均衡；依行程安排餐盒或於景點餐廳享用在地料理，並走進老巴剎小販中心品嚐各國美食，在學習之餘體驗當地文化。</p>
+            </div>
+            <div class="card card-pop p-5">
+                <p class="text-2xl">🚇</p>
+                <p class="font-black text-xl text-lionRed">交通安排</p>
+                <p class="mt-1 text-[15px]">由專業團隊統籌規劃，依每日行程搭乘遊覽車及大眾運輸（如地鐵）移動。全程由帶隊教師與工作人員陪同照護，確保學生行動安全。</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
+            <div class="photo aspect-[4/3]"><img src="img/stay-meal-1.jpg" alt="學員一起享用午餐" loading="lazy"></div>
+            <div class="photo aspect-[4/3]"><img src="img/stay-hawker.jpg" alt="老巴剎小販中心" loading="lazy"></div>
+            <div class="photo aspect-[4/3]"><img src="img/stay-meal-2.jpg" alt="學員在餐廳用餐" loading="lazy"></div>
+            <div class="photo aspect-[4/3]"><img src="img/stay-hotel-lesson.jpg" alt="學員在飯店交流空間進行每日回顧" loading="lazy"></div>
+        </div>
+
+        <div class="flex justify-end"><button type="button" data-next-panel="courses" class="px-5 py-3 rounded-2xl bg-lionRed text-white font-black shadow-[3px_3px_0px_#F5D46F] cursor-pointer">繼續探索：課程與六日行程 →</button></div>
+    </section>
+
+    <!-- ========== 3. 課程與行程 ========== -->
+    <section id="panel-courses" data-content-panel="courses" class="hidden space-y-10">
+        <div>
+            <p class="section-kicker">LEARNING 課程安排</p>
+            <h2 class="text-2xl sm:text-3xl font-black text-lionRed mt-1">三大主題課 × 任務導向實作</h2>
+            <div class="mt-5 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <article class="card card-pop overflow-hidden">
+                    <div class="aspect-[4/3] overflow-hidden"><img src="img/course-history.jpg" alt="學員在博物館閱讀展覽資料" class="w-full h-full object-cover" loading="lazy"></div>
+                    <div class="p-4"><p class="text-xs font-black text-palmGreen tracking-widest">LESSON 01</p><h3 class="font-black text-lg text-lionRed">歷史與文化</h3><p class="text-[15px]">探討新加坡的多元文化與歷史，走進國家博物館、小印度與阿拉伯街。</p></div>
+                </article>
+                <article class="card card-pop overflow-hidden">
+                    <div class="aspect-[4/3] overflow-hidden"><img src="img/course-science.jpg" alt="學員在 AI Workshop 操作電腦" class="w-full h-full object-cover" loading="lazy"></div>
+                    <div class="p-4"><p class="text-xs font-black text-palmGreen tracking-widest">LESSON 02</p><h3 class="font-black text-lg text-lionRed">科學與科技</h3><p class="text-[15px]">體驗互動式科學展覽，探索現代科技如何融入日常生活。</p></div>
+                </article>
+                <article class="card card-pop overflow-hidden">
+                    <div class="aspect-[4/3] overflow-hidden"><img src="img/course-environment.jpg" alt="學員參觀水耕蔬菜架" class="w-full h-full object-cover" loading="lazy"></div>
+                    <div class="p-4"><p class="text-xs font-black text-palmGreen tracking-widest">LESSON 03</p><h3 class="font-black text-lg text-lionRed">環境保護與永續</h3><p class="text-[15px]">從科技農場、雨林生態到水資源，探討新加坡的永續發展策略。</p></div>
+                </article>
+                <article class="card card-pop overflow-hidden">
+                    <div class="aspect-[4/3] overflow-hidden"><img src="img/course-project.jpg" alt="學員分組完成專題" class="w-full h-full object-cover" loading="lazy"></div>
+                    <div class="p-4"><p class="text-xs font-black text-lionRed tracking-widest">★ 任務實作</p><h3 class="font-black text-lg text-lionRed">城市探索 × 成果發表</h3><p class="text-[15px]">每日日記反思、Travel Log 影片創作，最後以迷你辯論與影片分享展現成果。</p></div>
+                </article>
+            </div>
+        </div>
+
+        <div>
+            <p class="section-kicker">CAMP SCHEDULE 六日行程</p>
+            <h2 class="text-2xl sm:text-3xl font-black text-lionRed mt-1">六天五夜，每天都是新任務</h2>
+            <div id="timeline" class="mt-5 space-y-5"></div>
+        </div>
+
+        <div class="flex justify-end"><button type="button" data-next-panel="game" class="px-5 py-3 rounded-2xl bg-lionRed text-white font-black shadow-[3px_3px_0px_#F5D46F] cursor-pointer">繼續探索：魚尾獅接水挑戰 →</button></div>
+    </section>
+
+    <!-- ========== 4. 魚尾獅接水遊戲 ========== -->
+    <section id="panel-game" data-content-panel="game" class="hidden space-y-6">
+        <div class="grid lg:grid-cols-12 gap-6 items-center">
+            <div class="lg:col-span-8">
+                <p class="section-kicker">MINI GAME 小遊戲</p>
+                <h2 class="text-2xl sm:text-3xl font-black text-lionRed mt-1">💦 魚尾獅接水大挑戰</h2>
+                <p class="mt-2">魚尾獅開始噴水啦！移動你的水桶，在 <strong class="text-lionRed">60 秒</strong>內接住越多水滴越好。時間越久，水滴會越來越快、越來越多！</p>
+                <ul class="mt-2 text-[15px] space-y-0.5">
+                    <li>💧 藍色水滴 <strong>+1</strong>　🌟 金色水滴 <strong>+3</strong>　🍈 小心榴槤 <strong>−2</strong></li>
+                    <li>操作：滑鼠／手指拖曳、鍵盤 ← →（或 A / D）、或按下方 ◀ ▶ 按鈕</li>
+                </ul>
+            </div>
+            <div class="lg:col-span-4 hidden lg:block"><div class="photo aspect-square"><img src="img/illus-merlion.jpg" alt="魚尾獅噴水插畫" loading="lazy"></div></div>
+        </div>
+
+        <div class="card card-pop p-4 sm:p-5">
+            <div class="grid sm:grid-cols-2 gap-3">
+                <label class="block"><span class="text-sm font-bold">何嘉仁分校（HESS Branch）</span><input id="game-branch" type="text" maxlength="20" placeholder="例如：OO 分校" class="w-full px-3.5 py-2.5 rounded-xl bg-white border-2 border-inkBrown/20 focus:border-lionRed outline-none text-base font-bold"></label>
+                <label class="block"><span class="text-sm font-bold">英文名字（English Name）</span><input id="game-en-name" type="text" maxlength="20" placeholder="例如：Sunny" class="w-full px-3.5 py-2.5 rounded-xl bg-white border-2 border-inkBrown/20 focus:border-lionRed outline-none text-base font-bold"></label>
+            </div>
+            <p class="text-xs text-inkBrown/60 mt-2">名字只存在你自己的瀏覽器，用來記錄「我的成績」，不會上傳。</p>
+
+            <div class="mt-4 flex flex-wrap items-center gap-x-5 gap-y-1 rounded-xl bg-inkBrown text-white px-4 py-2 font-bold text-[15px]">
+                <div id="active-player-badge" class="truncate max-w-full">選手：尚未設定</div>
+                <div>⏱️ <strong id="game-time" class="text-sunYellow">60</strong> 秒</div>
+                <div>Lv.<strong id="game-level" class="text-sunYellow">1</strong></div>
+                <div>得分 <strong id="game-score" class="text-sunYellow">0</strong></div>
+            </div>
+
+            <div class="relative mt-3 rounded-2xl overflow-hidden border-2 border-inkBrown">
+                <canvas id="merlion-canvas" class="w-full h-80 sm:h-96 block select-none" aria-label="魚尾獅接水遊戲畫面"></canvas>
+                <div id="game-overlay" class="absolute inset-0 bg-inkBrown/70 backdrop-blur-[2px] flex flex-col items-center justify-center p-4 text-center text-white">
+                    <div id="overlay-title" class="text-xl sm:text-2xl font-black text-sunYellow mb-1">準備好接水了嗎？</div>
+                    <p id="overlay-subtitle" class="text-base text-white/95 max-w-md mb-4">60 秒內接住魚尾獅噴出的水滴，速度會越來越快喔！</p>
+                    <button id="overlay-start-btn" type="button" class="px-6 py-3 rounded-xl bg-lionRed hover:bg-red-800 text-white font-black text-base shadow-[3px_3px_0px_#F5D46F] cursor-pointer">▶ 開始挑戰</button>
+                </div>
+            </div>
+            <div class="mt-3 flex gap-3 justify-center">
+                <button id="btn-left" type="button" aria-label="向左移動" class="ctrl-btn flex-1 sm:flex-none sm:w-32 py-4 rounded-2xl bg-palmGreen text-white font-black text-2xl shadow-[4px_4px_0px_#3E2A24] active:translate-y-0.5 cursor-pointer">◀</button>
+                <button id="btn-restart" type="button" class="ctrl-btn px-5 py-4 rounded-2xl bg-sunYellow text-inkBrown font-black text-base shadow-[4px_4px_0px_#3E2A24] cursor-pointer">↻ 重新開始</button>
+                <button id="btn-right" type="button" aria-label="向右移動" class="ctrl-btn flex-1 sm:flex-none sm:w-32 py-4 rounded-2xl bg-palmGreen text-white font-black text-2xl shadow-[4px_4px_0px_#3E2A24] active:translate-y-0.5 cursor-pointer">▶</button>
+            </div>
+        </div>
+
+        <div class="card p-5">
+            <h3 class="font-black text-lg text-lionRed">🏅 我的成績</h3>
+            <div id="my-stats-name" class="text-base font-bold text-inkBrown/80">填好分校與英文名字就能開始累積</div>
+            <div class="mt-3 grid grid-cols-3 gap-3 text-center">
+                <div class="rounded-xl bg-softYellow p-3"><div id="my-best" class="text-2xl font-black text-lionRed">0</div><div class="text-sm">最高分</div></div>
+                <div class="rounded-xl bg-softYellow p-3"><div id="my-total" class="text-2xl font-black text-inkBrown">0</div><div class="text-sm">累積總分</div></div>
+                <div class="rounded-xl bg-softYellow p-3"><div id="my-runs" class="text-2xl font-black text-inkBrown">0</div><div class="text-sm">挑戰局數</div></div>
+            </div>
+            <p class="text-sm text-inkBrown/70 mt-3">每 10 秒升一級：水滴更快、更密集。多玩幾局，挑戰更高分！</p>
+        </div>
+
+        <div class="flex justify-end"><button type="button" data-next-panel="spots" class="px-5 py-3 rounded-2xl bg-lionRed text-white font-black shadow-[3px_3px_0px_#F5D46F] cursor-pointer">繼續探索：遊學景點翻翻卡 →</button></div>
+    </section>
+
+    <!-- ========== 5. 遊學景點 ========== -->
+    <section id="panel-spots" data-content-panel="spots" class="hidden space-y-5">
+        <div>
+            <p class="section-kicker">EXCURSIONS 遊學景點</p>
+            <h2 class="text-2xl sm:text-3xl font-black text-lionRed mt-1">12 大精選新加坡景點明信片翻翻卡</h2>
+            <p class="mt-1">點一下明信片，就能翻面看景點介紹（照片為 2026 營隊實拍）</p>
+        </div>
+        <div id="flip-cards-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5"></div>
+        <div class="flex justify-end"><button type="button" data-next-panel="feedback" class="px-5 py-3 rounded-2xl bg-lionRed text-white font-black shadow-[3px_3px_0px_#F5D46F] cursor-pointer">繼續探索：學生回饋與成果 →</button></div>
+    </section>
+
+    <!-- ========== 6. 學生回饋 ========== -->
+    <section id="panel-feedback" data-content-panel="feedback" class="hidden space-y-10">
+        <div>
+            <p class="section-kicker">FEEDBACK 2026 學員回饋</p>
+            <h2 class="text-2xl sm:text-3xl font-black text-lionRed mt-1">在旅途中突破自我、滿載而歸</h2>
+            <div class="mt-4 grid grid-cols-2 lg:grid-cols-4 gap-3">
+                <div class="card card-pop p-4 text-center"><div class="text-3xl font-black text-lionRed">4.8 ★</div><div class="text-sm font-bold">問卷平均星等</div></div>
+                <div class="card card-pop p-4 text-center"><div class="text-3xl font-black text-lionRed">10 / 11</div><div class="text-sm font-bold">位學員給五顆星</div></div>
+                <div class="card card-pop p-4 text-center"><div class="text-3xl font-black text-lionRed">10 / 11</div><div class="text-sm font-bold">最愛環球影城＋濱灣花園日</div></div>
+                <div class="card card-pop p-4 text-center"><div class="text-3xl font-black text-lionRed">100%</div><div class="text-sm font-bold">覺得交到新朋友、留下美好回憶</div></div>
+            </div>
+        </div>
+
+        <div>
+            <p class="section-kicker">VIDEO 營隊影片</p>
+            <h3 class="text-xl sm:text-2xl font-black text-lionRed mt-1">🎬 2026 新加坡營精彩回顧</h3>
+            <div class="mt-4 video-wrap">
+                <iframe src="https://www.youtube-nocookie.com/embed/SPdfxQhyJnU?rel=0" title="2026 何嘉仁新加坡自信成長營影片" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <p class="mt-2 text-sm"><a class="underline text-lionRed font-bold" href="https://youtu.be/SPdfxQhyJnU" target="_blank" rel="noopener">在 YouTube 觀看 ↗</a></p>
+        </div>
+
+        <div>
+            <p class="section-kicker">STUDENT VOICES 學員心聲</p>
+            <div id="testimonials" class="mt-4 grid sm:grid-cols-2 lg:grid-cols-4 gap-4"></div>
+            <p class="mt-2 text-xs text-inkBrown/60">內容摘自 2026 新加坡自信成長營回饋問卷，僅標示英文名與分校。</p>
+        </div>
+
+        <div>
+            <p class="section-kicker">GRADUATION 結業時刻</p>
+            <h3 class="text-xl sm:text-2xl font-black text-lionRed mt-1">🎓 Camp Closing 結業典禮</h3>
+            <div class="mt-4 grid grid-cols-2 lg:grid-cols-4 gap-3">
+                <div class="photo col-span-2 row-span-2 aspect-[4/3] lg:aspect-auto"><img src="img/grad-07.jpg" alt="學員拿著結業證書與老師大合照" loading="lazy"></div>
+                <div class="photo aspect-[4/3]"><img src="img/grad-01.jpg" alt="學員領取結業證書" loading="lazy"></div>
+                <div class="photo aspect-[4/3]"><img src="img/grad-03.jpg" alt="學員領取結業證書" loading="lazy"></div>
+                <div class="photo aspect-[4/3]"><img src="img/grad-04.jpg" alt="學員領取結業證書" loading="lazy"></div>
+                <div class="photo aspect-[4/3]"><img src="img/grad-06.jpg" alt="學員領取結業證書" loading="lazy"></div>
+                <div class="photo aspect-[4/3]"><img src="img/grad-02.jpg" alt="學員領取結業證書" loading="lazy"></div>
+                <div class="photo aspect-[4/3]"><img src="img/grad-05.jpg" alt="學員領取結業證書" loading="lazy"></div>
+                <div class="photo col-span-2 aspect-[16/9]"><img src="img/grad-08.jpg" alt="全體學員在樟宜機場拉布條合影" loading="lazy"></div>
+            </div>
+        </div>
+
+        <div>
+            <p class="section-kicker">SHOWCASE 學習成果展現</p>
+            <div class="mt-4 grid sm:grid-cols-3 gap-4">
+                <div class="card card-pop-green p-5"><p class="font-black text-lg text-lionRed">📔 日記反思 Reflection</p><p class="text-[15px] mt-1">每天晚上寫下觀察與發現，練習用英文整理一天的學習。</p></div>
+                <div class="card card-pop-green p-5"><p class="font-black text-lg text-lionRed">🎥 Travel Log 影片</p><p class="text-[15px] mt-1">分組拍攝、剪輯城市探索片段，化身小小 YouTuber 分享旅程。</p></div>
+                <div class="card card-pop-green p-5"><p class="font-black text-lg text-lionRed">🎤 迷你辯論 Debate</p><p class="text-[15px] mt-1">結業日以英文辯論與成果發表，閃耀你與團隊的光芒！</p></div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="mt-6 bg-lionRed text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid md:grid-cols-12 gap-6 items-center">
+        <div class="md:col-span-8">
+            <p class="font-script text-4xl text-sunYellow leading-none">Singapore</p>
+            <p class="font-black text-xl mt-2">2027 何嘉仁新加坡自信成長營</p>
+            <p class="font-bold text-white/90">HESS Singapore Camp Confidence ・ 2027/7/25 – 7/30</p>
+            <p class="mt-3 text-white/90">在旅途中學會獨立與勇敢，於感恩與珍惜中逐漸歷練成長；帶著自信與夢想前行，走向更遼闊的世界，迎接無限可能！</p>
+            <p class="mt-2 font-bold text-sunYellow">Daring to Dream / 勇敢追夢 ・ Independent. Curious. Confident.</p>
+        </div>
+        <div class="md:col-span-4"><img src="img/illus-closing.jpg" alt="魚尾獅與濱海灣夕陽插畫" class="w-full rounded-2xl border-4 border-sunYellow" loading="lazy"></div>
+    </div>
+    <div class="text-center text-sm text-white/70 pb-5">Managed by Sylar</div>
+</footer>
+
+<script>
+    // ===== 0. 開場飛機：每訪播放一次；?plane=1 重播、?plane=0 略過 =====
+    (function () {
+        try {
+            const params = new URLSearchParams(window.location.search);
+            const force = params.get('plane') === '1';
+            if (params.get('plane') === '0') return;
+            if (!force && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            if (!force && sessionStorage.getItem('sg2027-plane') === '1') return;
+            if (!force) sessionStorage.setItem('sg2027-plane', '1');
+        } catch (e) { return; }
+        const root = document.createElement('div');
+        root.className = 'plane-intro';
+        root.setAttribute('aria-hidden', 'true');
+        root.innerHTML = '<div class="plane-runner"><div class="plane-trail"></div><svg viewBox="0 0 120 48"><path d="M4 26 L84 22 Q112 21 116 24 Q112 28 84 28 L4 30 Z" fill="#fff" stroke="#3E2A24" stroke-width="2"/><path d="M48 24 L30 4 L40 4 L66 24 Z" fill="#A8322D" stroke="#3E2A24" stroke-width="2"/><path d="M50 28 L34 46 L44 46 L68 28 Z" fill="#A8322D" stroke="#3E2A24" stroke-width="2"/><path d="M8 26 L2 12 L10 12 L20 25 Z" fill="#F5D46F" stroke="#3E2A24" stroke-width="2"/></svg></div>';
+        document.body.appendChild(root);
+        const done = () => root.remove();
+        root.querySelector('.plane-runner').addEventListener('animationend', done);
+        setTimeout(done, 3500);
+    })();
+
+    // ===== 1. 單元切換 =====
+    const panelButtons = document.querySelectorAll('[data-panel-btn]');
+    const contentPanels = document.querySelectorAll('[data-content-panel]');
+    const menuBtn = document.getElementById('menu-btn');
+    const menuSheet = document.getElementById('menu-sheet');
+    const PANEL_KEYS = ['spirit', 'team', 'courses', 'game', 'spots', 'feedback'];
+
+    function setMenu(open) {
+        menuSheet.classList.toggle('hidden', !open);
+        menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+    function activatePanel(key, scroll) {
+        if (!PANEL_KEYS.includes(key)) key = 'spirit';
+        panelButtons.forEach((btn) => {
+            const on = btn.getAttribute('data-panel-btn') === key;
+            btn.classList.toggle('is-active', on);
+            btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+            if (btn.classList.contains('menu-item')) {
+                btn.classList.toggle('bg-creamBg', on);
+                btn.classList.toggle('text-lionRed', on);
+            }
+        });
+        contentPanels.forEach((p) => p.classList.toggle('hidden', p.getAttribute('data-content-panel') !== key));
+        if (history.replaceState) history.replaceState(null, '', '#' + key);
+        setMenu(false);
+        if (key === 'game') { Game.resize(); Game.drawIdle(); } else { Game.pauseIfRunning(); }
+        if (scroll) document.getElementById('section-tabs').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    panelButtons.forEach((btn) => btn.addEventListener('click', () => activatePanel(btn.getAttribute('data-panel-btn'), true)));
+    document.querySelectorAll('[data-next-panel]').forEach((btn) => btn.addEventListener('click', () => activatePanel(btn.getAttribute('data-next-panel'), true)));
+    menuBtn.addEventListener('click', (e) => { e.stopPropagation(); setMenu(menuSheet.classList.contains('hidden')); });
+    document.addEventListener('click', (e) => { if (!menuSheet.contains(e.target) && e.target !== menuBtn) setMenu(false); });
+
+    // ===== 首頁照片輪播 =====
+    (function () {
+        const track = document.getElementById('hero-track');
+        const slides = track.children;
+        const dotsBox = document.getElementById('hero-dots');
+        let idx = 0, timer = null;
+        for (let i = 0; i < slides.length; i++) {
+            const d = document.createElement('button');
+            d.type = 'button'; d.className = 'hero-dot'; d.setAttribute('aria-label', '第 ' + (i + 1) + ' 張');
+            d.addEventListener('click', () => { go(i); restart(); });
+            dotsBox.appendChild(d);
+        }
+        function go(i) {
+            idx = (i + slides.length) % slides.length;
+            track.style.transform = 'translateX(' + (-idx * 100) + '%)';
+            [...dotsBox.children].forEach((d, k) => d.classList.toggle('is-active', k === idx));
+        }
+        function restart() { clearInterval(timer); timer = setInterval(() => go(idx + 1), 5000); }
+        document.getElementById('hero-prev').addEventListener('click', () => { go(idx - 1); restart(); });
+        document.getElementById('hero-next').addEventListener('click', () => { go(idx + 1); restart(); });
+        let sx = null;
+        const vp = document.getElementById('hero-viewport');
+        vp.addEventListener('touchstart', (e) => { sx = e.touches[0].clientX; }, { passive: true });
+        vp.addEventListener('touchend', (e) => {
+            if (sx === null) return;
+            const dx = e.changedTouches[0].clientX - sx;
+            if (Math.abs(dx) > 40) { go(idx + (dx < 0 ? 1 : -1)); restart(); }
+            sx = null;
+        });
+        go(0); restart();
+    })();
+
+    // ===== 2. 六日行程 =====
+    const days = [
+        { d: 'Day 1', date: '7/25（日）', en: 'Exploring', zh: '探索開始', illus: 'illus-day1.jpg', photo: 'hero-02-jewel.jpg',
+          items: [['Arrive / 抵達新加坡', '抵達樟宜機場，參觀兼具環保與設計之美的「星耀樟宜」。'], ['Jewel @ Changi 星耀樟宜', '探索雨漩渦循環用水、綠意與室內溫控設計。'], ['Camp Opening 迎新活動', '營隊開幕與迎新，熟悉團員與老師，凝聚團隊精神。'], ['Dinner and Diary 晚餐', '用餐與首日日記。']] },
+        { d: 'Day 2', date: '7/26（一）', en: 'History & Culture', zh: '歷史與文化', illus: 'illus-day2.jpg', photo: 'hero-03-sultan-mosque.jpg',
+          items: [['Lesson 1 歷史與文化', '探討新加坡的多元文化與歷史。'], ['National Museum 國家博物館', '認識城市發展脈絡。'], ['Little India & Arab Street', '探索小印度和阿拉伯街，體驗歷史和文化。'], ['Shopping 城市尋寶 ＋ 日記交流', '城市漫遊探尋特色紀念品，分享觀察與發現。']] },
+        { d: 'Day 3', date: '7/27（二）', en: 'Science & Technology', zh: '科學與科技', illus: 'illus-day3.jpg', photo: 'team-class-3.jpg',
+          items: [['Lesson 2 科學與科技', '探索現代科技的應用，以及它如何融入日常生活。'], ['Singapore Discovery Centre 新加坡探索中心', '互動探索與團隊任務。'], ['Science Centre Singapore 新加坡科學館', '動手實驗、觀察科技應用。'], ['Lau Pa Sat 老巴剎小販市場', '品嚐來自世界各地的美食，晚上整理一天的科學發現。']] },
+        { d: 'Day 4', date: '7/28（三）', en: 'Environment Protection', zh: '環境保護', illus: 'illus-day4.jpg', photo: 'hero-06-hydroponic.jpg',
+          items: [['Lesson 3 環境保護策略', '探討新加坡環境的永續發展。'], ['Kok Fah 科技水耕農場', '在現代水耕農場體驗青醬（Pesto）製作工作坊。'], ['Rainforest Wild 雨林生態園', '透過沉浸式雨林體驗，探索生態系統與自然保育。'], ['Night Safari 夜間動物園', '世界唯一夜間開放的動物園，一窺動物們的月光派對。']] },
+        { d: 'Day 5', date: '7/29（四）', en: 'Activity Day', zh: '活動日', illus: 'illus-day5.jpg', photo: 'hero-09-supertrees.jpg',
+          items: [['Universal Studios 環球影城', '盡情暢玩主題樂園，身臨其境探索電影場景。'], ['Gardens by the Bay 濱灣花園', '近距離欣賞超級樹，感受自然、生態與科技交織的震撼。'], ['Super Trees 超級樹', '壯觀景色與獨特建築，現代科技與大自然的結合。'], ['Travel Log Time 影片創作交流', '剪輯並分享旅程片段。']] },
+        { d: 'Day 6', date: '7/30（五）', en: 'Camp Closing', zh: '營隊閉幕', illus: 'illus-day6.jpg', photo: 'hero-11-certificates.jpg',
+          items: [['Debate & Performance 成果發表', 'Final Debate 辯論會；YouTuber Video Showcase 影片分享。'], ['Camp Closing 營隊閉幕式', '分享旅程的難忘時刻，閃耀你與團隊的光芒！'], ['Back to Taiwan 甜蜜的家', '帶著回憶、自信與成長返家。']] }
+    ];
+    (function () {
+        const box = document.getElementById('timeline');
+        box.innerHTML = days.map((day, i) => `
+            <article class="tl-day card ${i % 2 ? 'bg-softYellow' : ''} p-4 sm:p-5 grid md:grid-cols-12 gap-4 items-start">
+                <div class="md:col-span-4 grid grid-cols-2 gap-2">
+                    <div class="photo aspect-square"><img src="img/${day.illus}" alt="${day.d} ${day.zh} 行程插畫" loading="lazy"></div>
+                    <div class="photo aspect-square"><img src="img/${day.photo}" alt="2026 營隊 ${day.zh} 實拍" loading="lazy"></div>
+                </div>
+                <div class="md:col-span-8">
+                    <div class="flex flex-wrap items-baseline gap-x-3">
+                        <span class="day-badge text-3xl text-lionRed">${day.d}</span>
+                        <h3 class="text-xl font-black text-lionRed">${day.en} ${day.zh}</h3>
+                        <span class="text-sm font-bold text-palmGreen">Camp Schedule ・ ${day.date}</span>
+                    </div>
+                    <ul class="mt-2 grid sm:grid-cols-2 gap-2">
+                        ${day.items.map(([t, s]) => `<li class="rounded-xl bg-white border-2 border-inkBrown/10 p-3"><p class="font-black text-[15px] text-inkBrown">${t}</p><p class="text-[14px] text-inkBrown/80 leading-snug">${s}</p></li>`).join('')}
+                    </ul>
+                </div>
+            </article>`).join('');
+    })();
+
+    // ===== 3. 12 大景點翻翻卡 =====
+    const spots = [
+        { en: 'JEWEL CHANGI', zh: '星耀樟宜', tag: '環保與設計之美', img: 'spot-jewel.jpg', desc: '樟宜機場的地標，擁有全球最高的室內瀑布「雨漩渦」。學員觀察雨水循環用水與室內溫控設計，了解綠建築如何兼顧美感與環保。' },
+        { en: 'NATIONAL MUSEUM', zh: '新加坡國家博物館', tag: '城市發展脈絡', img: 'spot-museum.jpg', desc: '新加坡歷史最悠久的博物館，以沉浸式展覽述說這座城市從漁村、貿易港到獨立國家的故事，認識城市發展脈絡。' },
+        { en: 'LITTLE INDIA', zh: '小印度', tag: '多元文化體驗', img: 'spot-little-india.jpg', desc: '色彩繽紛的印度文化街區，香料、花環與傳統小吃隨處可見。學員用英語與店家互動，體驗不同文化的生活樣貌。' },
+        { en: 'ARAB STREET', zh: '阿拉伯街', tag: '歷史街區巡禮', img: 'spot-arab-street.jpg', desc: '以金色圓頂的蘇丹回教堂為中心，保留馬來與阿拉伯文化的老街區，布料、香水與手工藝店林立，感受多元宗教與文化共存。' },
+        { en: 'DISCOVERY CENTRE', zh: '新加坡探索中心', tag: '互動探索任務', img: 'spot-discovery.jpg', desc: '以互動展區介紹新加坡的過去、現在與未來，學員透過團隊任務認識國家如何面對挑戰、規劃城市。' },
+        { en: 'SCIENCE CENTRE', zh: '新加坡科學館', tag: '動手做實驗', img: 'spot-science.jpg', desc: '舉世聞名的互動式科學展覽，從光影、聲音到能源，學員動手實驗、觀察現代科技如何融入日常生活。' },
+        { en: 'LAU PA SAT', zh: '老巴剎小販市場', tag: '在地美食文化', img: 'spot-lau-pa-sat.jpg', desc: '維多利亞式鑄鐵建築的百年市場，匯集各國小販美食。學員自己點餐、付款，品嚐沙嗲、福建炒麵等在地風味。' },
+        { en: 'KOK FAH FARM', zh: 'Kok Fah 科技水耕農場', tag: '永續農業', img: 'spot-kok-fah.jpg', desc: '新加坡土地有限，如何種出新鮮蔬菜？學員參觀現代水耕農場，並親手做青醬（Pesto），認識糧食自主與永續農業。' },
+        { en: 'RAINFOREST WILD', zh: '雨林生態園', tag: '自然保育', img: 'spot-rainforest.jpg', desc: '走進沉浸式熱帶雨林，穿越吊橋、瀑布與步道，探索生態系統與自然保育的重要性。' },
+        { en: 'NIGHT SAFARI', zh: '夜間動物園', tag: '世界唯一夜間動物園', img: 'illus-day4.jpg', desc: '全世界第一座夜間開放的動物園，在月光下觀察夜行性動物的生活，參加動物們的「月光派對」。' },
+        { en: 'UNIVERSAL STUDIOS', zh: '新加坡環球影城', tag: '活動日', img: 'spot-uss.jpg', desc: '盡情暢玩主題樂園，體驗各項遊樂設施，身臨其境探索電影場景與情節，是學員票選最愛的一天！' },
+        { en: 'GARDENS BY THE BAY', zh: '濱灣花園與超級樹', tag: '花園城市', img: 'spot-gardens.jpg', desc: '近距離欣賞高聳的超級樹與夢幻景觀，感受自然、生態與科技交織而成的花園城市魅力。' }
+    ];
+    (function () {
+        const grid = document.getElementById('flip-cards-grid');
+        grid.innerHTML = spots.map((s, i) => `
+            <div class="flip" role="button" tabindex="0" aria-label="${s.zh}，點擊翻面">
+                <div class="flip-inner">
+                    <div class="flip-face flip-front">
+                        <div class="pic"><img src="img/${s.img}" alt="${s.zh}" loading="lazy"></div>
+                        <span class="stamp">No.${String(i + 1).padStart(2, '0')}</span>
+                        <div class="px-2 py-2"><p class="text-xs font-black tracking-widest text-palmGreen">${s.en}</p><p class="font-black text-lg text-lionRed leading-tight">${s.zh}</p></div>
+                    </div>
+                    <div class="flip-face flip-back">
+                        <p class="text-xs font-black tracking-widest text-palmGreen">${s.en}</p>
+                        <p class="font-black text-xl text-lionRed">${s.zh}</p>
+                        <p class="mt-1 inline-block self-start px-2 py-0.5 rounded-full bg-lionRed text-white text-xs font-bold">${s.tag}</p>
+                        <p class="mt-3 text-[15px] leading-relaxed">${s.desc}</p>
+                        <p class="mt-auto text-xs text-inkBrown/60">再點一下翻回正面 ↺</p>
+                    </div>
+                </div>
+            </div>`).join('');
+        grid.querySelectorAll('.flip').forEach((c) => {
+            const t = () => c.classList.toggle('is-flipped');
+            c.addEventListener('click', t);
+            c.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); t(); } });
+        });
+    })();
+
+    // ===== 4. 學員心聲（2026 回饋問卷，只列英文名＋分校） =====
+    const voices = [
+        { name: 'Blaire', branch: '新中壢分校', text: '獨自和不認識的人到海外遊學，很刺激，也讓我學習獨立和自信。有機會一定要參加，我也會推薦給兩位弟弟！' },
+        { name: 'Annie', branch: '九如分校', text: '小印度 & 阿拉伯街文化體驗，能夠認識不同的文化，用英語去跟外國人溝通，我覺得很好玩，而且很有成就感 🤩' },
+        { name: 'Joyce', branch: '嘉義崇文分校', text: '到小印度和阿拉伯街時，店員親切地為我們導覽和分享。遇到許多親切的新加坡人，一起聊天，也認識許多新朋友。' },
+        { name: 'Emma', branch: '藝文分校', text: '願你們以獅城為界，跨越舒適圈的海岸，帶走的不只是語言與閱歷，更是能翻湧出未來的世界格局。' },
+        { name: 'Merry', branch: '大墩分校', text: '同學、老師們人都很好，回國時哭得很慘。超級好玩！👍🏻' },
+        { name: 'Nick', branch: '新重慶分校', text: '我已經知道一些新加坡式英文的單字，例如：shiok！上課、環球影城、吃飯時間都好難忘 😃' },
+        { name: 'Lena', branch: '彰化中山分校', text: '第一次自己出國！給學弟妹的建議：前幾天錢省著花，留到環球影城買爆 👻💗' },
+        { name: 'Walle', branch: '泰山分校', text: '新加坡科學中心讓我學到很多知識。（家長回饋：很滿意行程安排，有學習、有文化認識、有玩樂，希望繼續辦下去！）' }
+    ];
+    (function () {
+        const colors = ['bg-lionRed', 'bg-palmGreen', 'bg-bayBlue', 'bg-sunYellow text-inkBrown'];
+        document.getElementById('testimonials').innerHTML = voices.map((v, i) => `
+            <figure class="card card-pop p-5 flex flex-col">
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-full ${colors[i % 4]} text-white font-black text-xl flex items-center justify-center shrink-0">${v.name[0]}</div>
+                    <figcaption><p class="font-black text-lionRed text-lg leading-tight">${v.name}</p><p class="text-sm text-inkBrown/70">${v.branch}</p></figcaption>
+                </div>
+                <p class="text-sunYellow text-lg mt-2">★★★★★</p>
+                <blockquote class="text-[15px] mt-1">「${v.text}」</blockquote>
+            </figure>`).join('');
+    })();
+
+    // ===== 5. 魚尾獅接水小遊戲 =====
+    const Game = (function () {
+        const canvas = document.getElementById('merlion-canvas');
+        const ctx = canvas.getContext('2d');
+        const overlay = document.getElementById('game-overlay');
+        const oTitle = document.getElementById('overlay-title');
+        const oSub = document.getElementById('overlay-subtitle');
+        const elTime = document.getElementById('game-time');
+        const elLevel = document.getElementById('game-level');
+        const elScore = document.getElementById('game-score');
+        const inBranch = document.getElementById('game-branch');
+        const inName = document.getElementById('game-en-name');
+        const badge = document.getElementById('active-player-badge');
+
+        const DURATION = 60;           // 秒
+        const STORE_KEY = 'sg2027-merlion-stats';
+        let W = 800, H = 400, dpr = 1;
+        let state = 'idle';            // idle | running | paused | over
+        let drops = [], splashes = [], floaters = [];
+        let score = 0, caught = 0, missed = 0, elapsed = 0, spawnAcc = 0, lastTs = 0, rafId = null;
+        let bucket = { x: 400, w: 90, h: 46, speed: 620, vx: 0 };
+        const keys = { left: false, right: false };
+        let pointerX = null;
+
+        function resize() {
+            const rect = canvas.getBoundingClientRect();
+            if (!rect.width) return;
+            dpr = Math.min(window.devicePixelRatio || 1, 2);
+            W = rect.width; H = rect.height;
+            canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            bucket.w = Math.max(64, Math.min(110, W * 0.13));
+            bucket.h = bucket.w * 0.5;
+            bucket.x = Math.min(Math.max(bucket.x, bucket.w / 2), W - bucket.w / 2);
+            if (state !== 'running') draw();
+        }
+
+        // 難度：隨時間線性增加（0 → 1）
+        const diff = () => Math.min(1, elapsed / DURATION);
+        const level = () => Math.min(6, 1 + Math.floor(elapsed / 10));
+        const mouth = () => ({ x: W * 0.17 + 44, y: H * 0.36 });
+
+        function spawn() {
+            const m = mouth();
+            const d = diff();
+            const r = Math.random();
+            let type = 'water';
+            if (r < 0.1) type = 'gold';
+            else if (elapsed > 12 && r < 0.1 + 0.12 * d + 0.04) type = 'durian';
+            // 讓水滴落在畫面右側 25%~97% 範圍
+            const targetX = W * (0.28 + Math.random() * 0.69);
+            const flight = (1.5 - 0.75 * d) * (0.85 + Math.random() * 0.3); // 秒，越後面越快
+            const g = 2 * (H - 30 - m.y + H * 0.35) / (flight * flight);
+            const vy = (H - 30 - m.y - 0.5 * g * flight * flight) / flight;
+            drops.push({ x: m.x, y: m.y, vx: (targetX - m.x) / flight, vy, g, type, r: type === 'durian' ? 13 : 10, rot: 0 });
+        }
+
+        function update(dt) {
+            elapsed += dt;
+            if (elapsed >= DURATION) { elapsed = DURATION; endGame(); return; }
+            // 產生間隔：0.85 秒 → 0.22 秒
+            const interval = 0.85 - 0.63 * diff();
+            spawnAcc += dt;
+            while (spawnAcc >= interval) { spawnAcc -= interval; spawn(); if (diff() > 0.55 && Math.random() < 0.35) spawn(); }
+
+            // 移動水桶
+            if (keys.left || keys.right) {
+                bucket.x += (keys.right - keys.left) * bucket.speed * dt;
+            } else if (pointerX !== null) {
+                bucket.x += (pointerX - bucket.x) * Math.min(1, dt * 18);
+            }
+            bucket.x = Math.min(Math.max(bucket.x, bucket.w / 2), W - bucket.w / 2);
+
+            const by = H - 18 - bucket.h;
+            for (let i = drops.length - 1; i >= 0; i--) {
+                const p = drops[i];
+                p.vy += p.g * dt; p.x += p.vx * dt; p.y += p.vy * dt; p.rot += dt * 4;
+                // 接到：進入桶口
+                if (p.vy > 0 && p.y + p.r >= by && p.y - p.r <= by + 14 && Math.abs(p.x - bucket.x) <= bucket.w / 2 + p.r * 0.4) {
+                    const pts = p.type === 'gold' ? 3 : p.type === 'durian' ? -2 : 1;
+                    score = Math.max(0, score + pts);
+                    if (pts > 0) caught++;
+                    floaters.push({ x: p.x, y: by - 6, t: 0, txt: (pts > 0 ? '+' : '') + pts, color: pts > 0 ? (pts > 1 ? '#F5D46F' : '#ffffff') : '#ff8a80' });
+                    addSplash(p.x, by, p.type);
+                    drops.splice(i, 1);
+                    continue;
+                }
+                if (p.y - p.r > H - 18) {
+                    if (p.type !== 'durian') missed++;
+                    addSplash(p.x, H - 18, p.type);
+                    drops.splice(i, 1);
+                }
+            }
+            splashes.forEach((s) => { s.t += dt; s.parts.forEach((q) => { q.vy += 900 * dt; q.x += q.vx * dt; q.y += q.vy * dt; }); });
+            splashes = splashes.filter((s) => s.t < 0.5);
+            floaters.forEach((f) => { f.t += dt; f.y -= 50 * dt; });
+            floaters = floaters.filter((f) => f.t < 0.8);
+            updateHud();
+        }
+
+        function addSplash(x, y, type) {
+            const color = type === 'gold' ? '#F5D46F' : type === 'durian' ? '#8BC34A' : '#7FD3EA';
+            const parts = [];
+            for (let k = 0; k < 6; k++) parts.push({ x, y, vx: (Math.random() - 0.5) * 220, vy: -Math.random() * 260 - 60 });
+            splashes.push({ t: 0, color, parts });
+        }
+
+        function updateHud() {
+            elTime.textContent = Math.ceil(DURATION - elapsed);
+            elLevel.textContent = level();
+            elScore.textContent = score;
+        }
+
+        // ---------- 繪圖 ----------
+        function drawBackground(t) {
+            const sky = ctx.createLinearGradient(0, 0, 0, H);
+            sky.addColorStop(0, '#FFE7A8'); sky.addColorStop(0.6, '#FDF0C8'); sky.addColorStop(1, '#FBF5EA');
+            ctx.fillStyle = sky; ctx.fillRect(0, 0, W, H);
+            // 太陽
+            ctx.fillStyle = 'rgba(245,160,80,.55)';
+            ctx.beginPath(); ctx.arc(W * 0.86, H * 0.2, Math.min(W, H) * 0.09, 0, Math.PI * 2); ctx.fill();
+            // 濱海灣金沙剪影
+            const base = H * 0.66;
+            ctx.fillStyle = 'rgba(62,159,184,.35)';
+            const tw = W * 0.045, gap = W * 0.03, sx = W * 0.55;
+            for (let k = 0; k < 3; k++) { const x = sx + k * (tw + gap); ctx.fillRect(x, base - H * 0.3, tw, H * 0.3); }
+            ctx.beginPath(); ctx.moveTo(sx - W * 0.02, base - H * 0.31); ctx.lineTo(sx + 3 * tw + 2 * gap + W * 0.035, base - H * 0.33);
+            ctx.lineTo(sx + 3 * tw + 2 * gap + W * 0.035, base - H * 0.3); ctx.lineTo(sx - W * 0.02, base - H * 0.29); ctx.closePath(); ctx.fill();
+            // 其他大樓
+            ctx.fillStyle = 'rgba(62,42,36,.12)';
+            [[0.36, 0.18], [0.41, 0.24], [0.46, 0.15], [0.76, 0.2], [0.8, 0.13]].forEach(([x, h]) => ctx.fillRect(W * x, base - H * h, W * 0.03, H * h));
+            // 超級樹
+            [[0.9, 0.26], [0.95, 0.2], [0.33, 0.2]].forEach(([x, h]) => {
+                ctx.strokeStyle = 'rgba(47,125,91,.55)'; ctx.lineWidth = 5;
+                ctx.beginPath(); ctx.moveTo(W * x, base); ctx.lineTo(W * x, base - H * h); ctx.stroke();
+                ctx.fillStyle = 'rgba(168,50,45,.45)';
+                ctx.beginPath(); ctx.ellipse(W * x, base - H * h, W * 0.028, H * 0.025, 0, 0, Math.PI * 2); ctx.fill();
+            });
+            // 海水
+            const sea = ctx.createLinearGradient(0, base, 0, H);
+            sea.addColorStop(0, '#7FC8D8'); sea.addColorStop(1, '#3E9FB8');
+            ctx.fillStyle = sea; ctx.fillRect(0, base, W, H - base);
+            ctx.strokeStyle = 'rgba(255,255,255,.55)'; ctx.lineWidth = 2;
+            for (let row = 0; row < 3; row++) {
+                ctx.beginPath();
+                const yy = base + 14 + row * 22;
+                for (let x = 0; x <= W; x += 12) ctx.lineTo(x, yy + Math.sin(x / 26 + t * 2 + row) * 2.5);
+                ctx.stroke();
+            }
+            // 碼頭
+            ctx.fillStyle = '#E9D7B5'; ctx.fillRect(0, H - 18, W, 18);
+            ctx.fillStyle = 'rgba(62,42,36,.2)'; ctx.fillRect(0, H - 18, W, 2);
+        }
+
+        function drawMerlion(t, spraying) {
+            const bx = W * 0.17, by = H * 0.66;  // 基座中心
+            const s = Math.min(1.1, Math.max(0.7, H / 380));
+            ctx.save(); ctx.translate(bx, by); ctx.scale(s, s);
+            // 基座
+            ctx.fillStyle = '#C9B48E'; ctx.strokeStyle = '#3E2A24'; ctx.lineWidth = 3;
+            roundRect(-58, 0, 116, 34, 6); ctx.fill(); ctx.stroke();
+            // 魚身（鱗片）
+            ctx.fillStyle = '#FFFFFF';
+            ctx.beginPath();
+            ctx.moveTo(-34, 0); ctx.quadraticCurveTo(-48, -60, -10, -112);
+            ctx.lineTo(26, -108); ctx.quadraticCurveTo(40, -50, 34, 0); ctx.closePath();
+            ctx.fill(); ctx.stroke();
+            ctx.strokeStyle = 'rgba(62,159,184,.6)'; ctx.lineWidth = 2;
+            for (let r = 0; r < 4; r++) for (let c = 0; c < 3; c++) {
+                ctx.beginPath(); ctx.arc(-18 + c * 16 + (r % 2) * 8, -20 - r * 20, 7, 0, Math.PI); ctx.stroke();
+            }
+            // 魚尾
+            ctx.strokeStyle = '#3E2A24'; ctx.lineWidth = 3; ctx.fillStyle = '#FFFFFF';
+            ctx.beginPath(); ctx.moveTo(-36, -6); ctx.quadraticCurveTo(-70, -20, -62, -50); ctx.quadraticCurveTo(-54, -24, -30, -26); ctx.closePath(); ctx.fill(); ctx.stroke();
+            // 獅頭鬃毛
+            ctx.fillStyle = '#F5D46F';
+            ctx.beginPath(); ctx.arc(6, -132, 38, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+            ctx.fillStyle = '#E8B64A';
+            for (let k = 0; k < 10; k++) {
+                const a = (k / 10) * Math.PI * 2;
+                ctx.beginPath(); ctx.arc(6 + Math.cos(a) * 34, -132 + Math.sin(a) * 34, 8, 0, Math.PI * 2); ctx.fill();
+            }
+            // 臉
+            ctx.fillStyle = '#FFFFFF'; ctx.strokeStyle = '#3E2A24';
+            ctx.beginPath(); ctx.ellipse(14, -130, 26, 23, 0, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+            // 眼睛
+            ctx.fillStyle = '#3E2A24';
+            ctx.beginPath(); ctx.arc(16, -140, 3.5, 0, Math.PI * 2); ctx.fill();
+            // 嘴（張開噴水）
+            const open = spraying ? 6 + Math.sin(t * 20) * 1.5 : 3;
+            ctx.fillStyle = '#A8322D';
+            ctx.beginPath(); ctx.ellipse(36, -122, 8, open, 0, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+            // 鼻子
+            ctx.fillStyle = '#3E2A24'; ctx.beginPath(); ctx.arc(38, -133, 3, 0, Math.PI * 2); ctx.fill();
+            ctx.restore();
+            // 噴水柱（裝飾）
+            if (spraying) {
+                const m = mouth();
+                ctx.strokeStyle = 'rgba(127,211,234,.75)'; ctx.lineWidth = 6; ctx.lineCap = 'round';
+                ctx.beginPath(); ctx.moveTo(m.x, m.y);
+                ctx.quadraticCurveTo(m.x + 50, m.y - 30 + Math.sin(t * 6) * 4, m.x + 90, m.y - 6);
+                ctx.stroke();
+                ctx.lineCap = 'butt';
+            }
+        }
+
+        function drawDrop(p) {
+            ctx.save(); ctx.translate(p.x, p.y);
+            if (p.type === 'durian') {
+                ctx.rotate(p.rot);
+                ctx.fillStyle = '#8BC34A'; ctx.strokeStyle = '#33691E'; ctx.lineWidth = 2;
+                ctx.beginPath();
+                for (let k = 0; k < 16; k++) { const a = (k / 16) * Math.PI * 2, rr = k % 2 ? p.r : p.r + 5; ctx.lineTo(Math.cos(a) * rr, Math.sin(a) * rr); }
+                ctx.closePath(); ctx.fill(); ctx.stroke();
+            } else {
+                const ang = Math.atan2(p.vy, p.vx) - Math.PI / 2;
+                ctx.rotate(ang);
+                ctx.fillStyle = p.type === 'gold' ? '#F5C542' : '#4FB6D6';
+                ctx.strokeStyle = p.type === 'gold' ? '#B7791F' : '#1F6F8B'; ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.moveTo(0, -p.r * 1.6);
+                ctx.bezierCurveTo(p.r, -p.r * 0.4, p.r, p.r, 0, p.r);
+                ctx.bezierCurveTo(-p.r, p.r, -p.r, -p.r * 0.4, 0, -p.r * 1.6);
+                ctx.fill(); ctx.stroke();
+                ctx.fillStyle = 'rgba(255,255,255,.7)'; ctx.beginPath(); ctx.arc(-p.r * 0.3, 0, p.r * 0.25, 0, Math.PI * 2); ctx.fill();
+            }
+            ctx.restore();
+        }
+
+        function drawBucket() {
+            const x = bucket.x, w = bucket.w, h = bucket.h, y = H - 18 - h;
+            ctx.save();
+            ctx.fillStyle = '#A8322D'; ctx.strokeStyle = '#3E2A24'; ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.moveTo(x - w / 2, y); ctx.lineTo(x + w / 2, y);
+            ctx.lineTo(x + w * 0.38, y + h); ctx.lineTo(x - w * 0.38, y + h); ctx.closePath();
+            ctx.fill(); ctx.stroke();
+            ctx.fillStyle = '#F5D46F'; ctx.fillRect(x - w * 0.44, y + h * 0.35, w * 0.88, h * 0.18);
+            ctx.fillStyle = '#7FD3EA'; ctx.beginPath(); ctx.ellipse(x, y + 2, w / 2 - 4, 6, 0, 0, Math.PI * 2); ctx.fill();
+            ctx.strokeStyle = '#3E2A24'; ctx.lineWidth = 3;
+            ctx.beginPath(); ctx.arc(x, y, w * 0.45, Math.PI * 1.1, Math.PI * 1.9); ctx.stroke();
+            ctx.restore();
+        }
+
+        function draw(t = performance.now() / 1000) {
+            drawBackground(t);
+            drawMerlion(t, state === 'running');
+            drops.forEach(drawDrop);
+            splashes.forEach((s) => { ctx.fillStyle = s.color; ctx.globalAlpha = 1 - s.t / 0.5; s.parts.forEach((q) => { ctx.beginPath(); ctx.arc(q.x, q.y, 3, 0, Math.PI * 2); ctx.fill(); }); ctx.globalAlpha = 1; });
+            drawBucket();
+            floaters.forEach((f) => { ctx.globalAlpha = 1 - f.t / 0.8; ctx.fillStyle = f.color; ctx.strokeStyle = '#3E2A24'; ctx.lineWidth = 3; ctx.font = '900 22px "Noto Sans TC", sans-serif'; ctx.textAlign = 'center'; ctx.strokeText(f.txt, f.x, f.y); ctx.fillText(f.txt, f.x, f.y); ctx.globalAlpha = 1; });
+            // 時間條
+            const pct = 1 - elapsed / DURATION;
+            ctx.fillStyle = 'rgba(62,42,36,.15)'; ctx.fillRect(0, 0, W, 6);
+            ctx.fillStyle = pct > 0.25 ? '#2F7D5B' : '#A8322D'; ctx.fillRect(0, 0, W * pct, 6);
+        }
+
+        function roundRect(x, y, w, h, r) {
+            ctx.beginPath(); ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r);
+            ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath();
+        }
+
+        function loop(ts) {
+            if (state !== 'running') return;
+            const dt = Math.min(0.05, (ts - lastTs) / 1000 || 0);
+            lastTs = ts;
+            update(dt);
+            if (state === 'running') { draw(ts / 1000); rafId = requestAnimationFrame(loop); }
+        }
+
+        // ---------- 狀態 ----------
+        function playerKey() {
+            const b = inBranch.value.trim(), n = inName.value.trim();
+            return b && n ? b + '｜' + n : '';
+        }
+        function loadStats() { try { return JSON.parse(localStorage.getItem(STORE_KEY) || '{}'); } catch (e) { return {}; } }
+        function saveStats(all) { try { localStorage.setItem(STORE_KEY, JSON.stringify(all)); } catch (e) {} }
+        function renderStats() {
+            const k = playerKey();
+            badge.textContent = '選手：' + (k || '尚未設定');
+            const st = (k && loadStats()[k]) || { best: 0, total: 0, runs: 0 };
+            document.getElementById('my-stats-name').textContent = k ? k + ' 的成績' : '填好分校與英文名字就能開始累積';
+            document.getElementById('my-best').textContent = st.best;
+            document.getElementById('my-total').textContent = st.total;
+            document.getElementById('my-runs').textContent = st.runs;
+        }
+
+        function start() {
+            resize();
+            drops = []; splashes = []; floaters = [];
+            score = 0; caught = 0; missed = 0; elapsed = 0; spawnAcc = 0.5;
+            bucket.x = W * 0.62;
+            state = 'running';
+            overlay.classList.add('hidden');
+            updateHud();
+            lastTs = performance.now();
+            cancelAnimationFrame(rafId);
+            rafId = requestAnimationFrame(loop);
+        }
+        function endGame() {
+            state = 'over';
+            cancelAnimationFrame(rafId);
+            updateHud(); draw();
+            const k = playerKey();
+            let extra = '';
+            if (k) {
+                const all = loadStats();
+                const st = all[k] || { best: 0, total: 0, runs: 0 };
+                const isBest = score > st.best;
+                st.best = Math.max(st.best, score); st.total += score; st.runs += 1;
+                all[k] = st; saveStats(all);
+                extra = isBest ? '🎉 刷新個人最高分！' : '個人最高分：' + st.best;
+            } else {
+                extra = '填寫分校與英文名字，就能記錄你的成績';
+            }
+            renderStats();
+            oTitle.textContent = '時間到！你得到 ' + score + ' 分';
+            oSub.textContent = '接住 ' + caught + ' 滴、漏接 ' + missed + ' 滴。' + extra;
+            document.getElementById('overlay-start-btn').textContent = '↻ 再玩一次';
+            overlay.classList.remove('hidden');
+        }
+        function pauseIfRunning() {
+            if (state === 'running') {
+                state = 'paused'; cancelAnimationFrame(rafId);
+                oTitle.textContent = '遊戲暫停';
+                oSub.textContent = '目前 ' + score + ' 分，剩下 ' + Math.ceil(DURATION - elapsed) + ' 秒';
+                document.getElementById('overlay-start-btn').textContent = '▶ 繼續';
+                overlay.classList.remove('hidden');
+            }
+        }
+        function resume() {
+            state = 'running'; overlay.classList.add('hidden');
+            lastTs = performance.now(); rafId = requestAnimationFrame(loop);
+        }
+        function drawIdle() { if (state !== 'running') draw(); }
+
+        // ---------- 操作 ----------
+        document.getElementById('overlay-start-btn').addEventListener('click', () => { state === 'paused' ? resume() : start(); });
+        document.getElementById('btn-restart').addEventListener('click', start);
+        function canvasX(clientX) { const r = canvas.getBoundingClientRect(); return clientX - r.left; }
+        canvas.addEventListener('pointerdown', (e) => { pointerX = canvasX(e.clientX); canvas.setPointerCapture && canvas.setPointerCapture(e.pointerId); });
+        canvas.addEventListener('pointermove', (e) => { if (e.pointerType === 'mouse' || e.buttons || e.pressure > 0) pointerX = canvasX(e.clientX); });
+        canvas.addEventListener('pointerleave', (e) => { if (e.pointerType !== 'mouse') pointerX = null; });
+        function holdBtn(id, dir) {
+            const b = document.getElementById(id);
+            const on = (e) => { e.preventDefault(); keys[dir] = true; pointerX = null; };
+            const off = () => { keys[dir] = false; };
+            b.addEventListener('pointerdown', on); b.addEventListener('pointerup', off);
+            b.addEventListener('pointerleave', off); b.addEventListener('pointercancel', off);
+        }
+        holdBtn('btn-left', 'left'); holdBtn('btn-right', 'right');
+        window.addEventListener('keydown', (e) => {
+            if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA')) return;
+            if (document.getElementById('panel-game').classList.contains('hidden')) return;
+            if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') { keys.left = true; pointerX = null; e.preventDefault(); }
+            if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') { keys.right = true; pointerX = null; e.preventDefault(); }
+            if ((e.key === ' ' || e.key === 'Enter') && state !== 'running') { e.preventDefault(); state === 'paused' ? resume() : start(); }
+        });
+        window.addEventListener('keyup', (e) => {
+            if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') keys.left = false;
+            if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') keys.right = false;
+        });
+        [inBranch, inName].forEach((el) => el.addEventListener('input', renderStats));
+        window.addEventListener('resize', resize);
+        document.addEventListener('visibilitychange', () => { if (document.hidden) pauseIfRunning(); });
+        renderStats();
+
+        return { resize, drawIdle, pauseIfRunning, start, _debug: () => ({ state, score, elapsed, drops: drops.length, caught, missed }) };
+    })();
+
+    // 初始：依網址 #hash 開啟單元（例如 #game）
+    activatePanel((location.hash || '#spirit').slice(1), false);
+</script>
+</body>
+</html>
