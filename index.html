@@ -89,13 +89,14 @@
         .section-kicker { letter-spacing: .14em; font-weight: 900; font-size: 13px; color: #2F7D5B; }
 
         /* 翻翻卡 */
-        .flip { perspective: 1200px; cursor: pointer; }
+        .flip { perspective: 1200px; cursor: pointer; height: 100%; }
         .flip-inner { position: relative; width: 100%; aspect-ratio: 3 / 4; transition: transform .7s; transform-style: preserve-3d; }
         .flip.is-flipped .flip-inner { transform: rotateY(180deg); }
         .flip-face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: 20px; overflow: hidden; border: 3px solid #3E2A24; }
-        .flip-front { background: #fff; padding: 10px 10px 0; box-shadow: 4px 4px 0 #F5D46F; }
-        .flip-front .pic { height: 74%; border-radius: 12px; overflow: hidden; }
-        .flip-front .pic img { width: 100%; height: 100%; object-fit: cover; }
+        .flip-front { background: #fff; padding: 10px 10px 0; box-shadow: 4px 4px 0 #F5D46F; display: flex; flex-direction: column; }
+        .flip-front .pic { flex: 1; min-height: 0; border-radius: 12px; overflow: hidden; }
+        .flip-front .pic img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+        .flip-front .label { flex-shrink: 0; height: 4.35rem; display: flex; flex-direction: column; justify-content: center; }
         .flip-back { transform: rotateY(180deg); background: #FDF0C8; padding: 20px; display: flex; flex-direction: column; box-shadow: 4px 4px 0 #2F7D5B; }
         .stamp { position: absolute; top: 18px; right: 18px; background: #A8322D; color: #fff; font-size: 12px; font-weight: 900; padding: 2px 10px; border-radius: 999px; transform: rotate(6deg); }
 
@@ -342,31 +343,31 @@
         <div>
             <p class="section-kicker">LEARNING 課程安排</p>
             <h2 class="text-2xl sm:text-3xl font-black text-lionRed mt-1">三大主題課 × 任務導向實作</h2>
-            <div class="mt-5 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <article class="card card-pop overflow-hidden">
-                    <div class="aspect-[4/3] overflow-hidden"><img src="img/course-history.jpg" alt="學員在博物館閱讀展覽資料" class="w-full h-full object-cover" loading="lazy"></div>
-                    <div class="p-4"><p class="text-xs font-black text-palmGreen tracking-widest">LESSON 01</p><h3 class="font-black text-lg text-lionRed">歷史與文化</h3><p class="text-[15px]">探討新加坡的多元文化與歷史，走進國家博物館、小印度與阿拉伯街。</p></div>
+            <div class="mt-5 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 items-stretch">
+                <article class="card card-pop overflow-hidden h-full flex flex-col">
+                    <div class="aspect-[4/3] overflow-hidden shrink-0"><img src="img/course-history.jpg" alt="學員在博物館閱讀展覽資料" class="w-full h-full object-cover object-center" loading="lazy"></div>
+                    <div class="p-3 sm:p-4 flex-1 flex flex-col"><p class="text-xs font-black text-palmGreen tracking-widest">LESSON 01</p><h3 class="font-black text-base sm:text-lg text-lionRed">歷史與文化</h3><p class="text-[14px] sm:text-[15px] mt-0.5">探討新加坡的多元文化與歷史，走進國家博物館、小印度與阿拉伯街。</p></div>
                 </article>
-                <article class="card card-pop overflow-hidden">
-                    <div class="aspect-[4/3] overflow-hidden"><img src="img/course-science.jpg" alt="學員在 AI Workshop 操作電腦" class="w-full h-full object-cover" loading="lazy"></div>
-                    <div class="p-4"><p class="text-xs font-black text-palmGreen tracking-widest">LESSON 02</p><h3 class="font-black text-lg text-lionRed">科學與科技</h3><p class="text-[15px]">體驗互動式科學展覽，探索現代科技如何融入日常生活。</p></div>
+                <article class="card card-pop overflow-hidden h-full flex flex-col">
+                    <div class="aspect-[4/3] overflow-hidden shrink-0"><img src="img/course-science.jpg" alt="學員在 AI Workshop 操作電腦" class="w-full h-full object-cover object-center" loading="lazy"></div>
+                    <div class="p-3 sm:p-4 flex-1 flex flex-col"><p class="text-xs font-black text-palmGreen tracking-widest">LESSON 02</p><h3 class="font-black text-base sm:text-lg text-lionRed">科學與科技</h3><p class="text-[14px] sm:text-[15px] mt-0.5">體驗互動式科學展覽，探索現代科技如何融入日常生活。</p></div>
                 </article>
-                <article class="card card-pop overflow-hidden">
-                    <div class="aspect-[4/3] overflow-hidden"><img src="img/hero-07-rainforest.jpg" alt="學員在雨林生態園體驗自然保育" class="w-full h-full object-cover" loading="lazy"></div>
-                    <div class="p-4"><p class="text-xs font-black text-palmGreen tracking-widest">LESSON 03</p><h3 class="font-black text-lg text-lionRed">環境保護與永續</h3><p class="text-[15px]">從雨林生態到水資源，探討新加坡的永續發展策略。</p></div>
+                <article class="card card-pop overflow-hidden h-full flex flex-col">
+                    <div class="aspect-[4/3] overflow-hidden shrink-0"><img src="img/hero-09-supertrees.jpg" alt="學員在濱灣花園超級樹下合影" class="w-full h-full object-cover object-center" loading="lazy"></div>
+                    <div class="p-3 sm:p-4 flex-1 flex flex-col"><p class="text-xs font-black text-palmGreen tracking-widest">LESSON 03</p><h3 class="font-black text-base sm:text-lg text-lionRed">環境保護與永續</h3><p class="text-[14px] sm:text-[15px] mt-0.5">從濱灣花園、超級樹到水資源，探討新加坡的永續發展策略。</p></div>
                 </article>
-                <article class="card card-pop overflow-hidden">
-                    <div class="aspect-[4/3] overflow-hidden"><img src="img/course-project.jpg" alt="學員分組完成專題" class="w-full h-full object-cover" loading="lazy"></div>
-                    <div class="p-4"><p class="text-xs font-black text-lionRed tracking-widest">★ 任務實作</p><h3 class="font-black text-lg text-lionRed">城市探索 × 成果發表</h3><p class="text-[15px]">每日日記反思、Travel Log 影片創作，最後以迷你辯論與影片分享展現成果。</p></div>
+                <article class="card card-pop overflow-hidden h-full flex flex-col">
+                    <div class="aspect-[4/3] overflow-hidden shrink-0"><img src="img/course-project.jpg" alt="學員分組完成專題" class="w-full h-full object-cover object-center" loading="lazy"></div>
+                    <div class="p-3 sm:p-4 flex-1 flex flex-col"><p class="text-xs font-black text-lionRed tracking-widest">★ 任務實作</p><h3 class="font-black text-base sm:text-lg text-lionRed">城市探索 × 成果發表</h3><p class="text-[14px] sm:text-[15px] mt-0.5">每日日記反思、Travel Log 影片創作，最後以迷你辯論與影片分享展現成果。</p></div>
                 </article>
             </div>
         </div>
 
         <div>
             <p class="section-kicker">EXCURSIONS 遊學景點</p>
-            <h2 class="text-2xl sm:text-3xl font-black text-lionRed mt-1">9 大精選新加坡景點明信片翻翻卡</h2>
-            <p class="mt-1">點一下明信片，就能翻面看景點介紹。插畫擷取自營隊手冊；部分景點暫以 2026 營隊實拍呈現。</p>
-            <div id="flip-cards-grid" class="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5"></div>
+            <h2 class="text-2xl sm:text-3xl font-black text-lionRed mt-1">8 大精選新加坡景點明信片翻翻卡</h2>
+            <p class="mt-1">點一下明信片，就能翻面看景點介紹。插畫擷取自營隊手冊。</p>
+            <div id="flip-cards-grid" class="mt-5 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5"></div>
         </div>
 
         <div class="flex justify-end"><button type="button" data-next-panel="game" class="px-5 py-3 rounded-2xl bg-lionRed text-white font-black shadow-[3px_3px_0px_#F5D46F] cursor-pointer">繼續探索：魚尾獅接水挑戰 →</button></div>
@@ -587,7 +588,6 @@
         { en: 'ARAB STREET', zh: '阿拉伯街', img: 'spot-illus-arab-street.jpg', desc: '以金色圓頂的蘇丹回教堂為中心，保留馬來與阿拉伯文化的老街區，布料、香水與手工藝店林立，感受多元宗教與文化共存。' },
         { en: 'SCIENCE CENTRE', zh: '新加坡科學館', img: 'spot-illus-science.jpg', desc: '舉世聞名的互動式科學展覽，從光影、聲音到能源，學員動手實驗、觀察現代科技如何融入日常生活。' },
         { en: 'LAU PA SAT', zh: '老巴剎小販市場', img: 'spot-illus-lau-pa-sat.jpg', desc: '維多利亞式鑄鐵建築的百年市場，匯集各國小販美食。學員自己點餐、付款，品嚐沙嗲、福建炒麵等在地風味。' },
-        { en: 'RAINFOREST WILD', zh: '雨林生態園', img: 'spot-rainforest.jpg', desc: '走進沉浸式熱帶雨林，穿越吊橋、瀑布與步道，探索生態系統與自然保育的重要性。' },
         { en: 'NIGHT SAFARI', zh: '夜間動物園', img: 'spot-illus-night-safari.jpg', desc: '全世界第一座夜間開放的動物園，在月光下觀察夜行性動物的生活，參加動物們的「月光派對」。' },
         { en: 'UNIVERSAL STUDIOS', zh: '新加坡環球影城', img: 'spot-illus-uss.jpg', desc: '盡情暢玩主題樂園，體驗各項遊樂設施，身臨其境探索電影場景與情節，是學員票選最愛的一天！' },
         { en: 'GARDENS BY THE BAY', zh: '濱灣花園與超級樹', img: 'spot-illus-gardens.jpg', desc: '近距離欣賞高聳的超級樹與夢幻景觀，感受自然、生態與科技交織而成的花園城市魅力。' }
@@ -600,7 +600,7 @@
                     <div class="flip-face flip-front">
                         <div class="pic"><img src="img/${s.img}" alt="${s.zh}" loading="lazy"></div>
                         <span class="stamp">No.${String(i + 1).padStart(2, '0')}</span>
-                        <div class="px-2 py-2"><p class="text-xs font-black tracking-widest text-palmGreen">${s.en}</p><p class="font-black text-lg text-lionRed leading-tight">${s.zh}</p></div>
+                        <div class="label px-2"><p class="text-[10px] sm:text-xs font-black tracking-widest text-palmGreen leading-tight">${s.en}</p><p class="font-black text-[15px] sm:text-lg text-lionRed leading-tight">${s.zh}</p></div>
                     </div>
                     <div class="flip-face flip-back">
                         <p class="text-xs font-black tracking-widest text-palmGreen">${s.en}</p>
