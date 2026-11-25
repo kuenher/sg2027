@@ -5,7 +5,7 @@
 - `index.html`：全部內容與程式（含「魚尾獅接水」Canvas 小遊戲）
 - `img/`：2026 營隊實拍（已壓縮）與說明會手冊插畫
 
-網址參數：`#spirit` `#team` `#courses` `#game` `#spots` `#feedback` 直接開啟單元；`?plane=0` 略過開場飛機。
+網址參數：`#spirit` `#team` `#courses` `#game` `#feedback`（`#spots` 會導向課程與景點） 直接開啟單元；`?plane=0` 略過開場飛機。
 
 發布：推到 GitHub 後於 Settings → Pages 選 `main` / root。
 
