@@ -352,8 +352,8 @@
                     <div class="p-4"><p class="text-xs font-black text-palmGreen tracking-widest">LESSON 02</p><h3 class="font-black text-lg text-lionRed">科學與科技</h3><p class="text-[15px]">體驗互動式科學展覽，探索現代科技如何融入日常生活。</p></div>
                 </article>
                 <article class="card card-pop overflow-hidden">
-                    <div class="aspect-[4/3] overflow-hidden"><img src="img/course-environment.jpg" alt="學員參觀水耕蔬菜架" class="w-full h-full object-cover" loading="lazy"></div>
-                    <div class="p-4"><p class="text-xs font-black text-palmGreen tracking-widest">LESSON 03</p><h3 class="font-black text-lg text-lionRed">環境保護與永續</h3><p class="text-[15px]">從科技農場、雨林生態到水資源，探討新加坡的永續發展策略。</p></div>
+                    <div class="aspect-[4/3] overflow-hidden"><img src="img/hero-07-rainforest.jpg" alt="學員在雨林生態園體驗自然保育" class="w-full h-full object-cover" loading="lazy"></div>
+                    <div class="p-4"><p class="text-xs font-black text-palmGreen tracking-widest">LESSON 03</p><h3 class="font-black text-lg text-lionRed">環境保護與永續</h3><p class="text-[15px]">從雨林生態到水資源，探討新加坡的永續發展策略。</p></div>
                 </article>
                 <article class="card card-pop overflow-hidden">
                     <div class="aspect-[4/3] overflow-hidden"><img src="img/course-project.jpg" alt="學員分組完成專題" class="w-full h-full object-cover" loading="lazy"></div>
@@ -364,7 +364,7 @@
 
         <div>
             <p class="section-kicker">EXCURSIONS 遊學景點</p>
-            <h2 class="text-2xl sm:text-3xl font-black text-lionRed mt-1">12 大精選新加坡景點明信片翻翻卡</h2>
+            <h2 class="text-2xl sm:text-3xl font-black text-lionRed mt-1">9 大精選新加坡景點明信片翻翻卡</h2>
             <p class="mt-1">點一下明信片，就能翻面看景點介紹。插畫擷取自營隊手冊；部分景點暫以 2026 營隊實拍呈現。</p>
             <div id="flip-cards-grid" class="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5"></div>
         </div>
@@ -580,16 +580,13 @@
         go(0); restart();
     })();
 
-    // ===== 2. 12 大景點翻翻卡 =====
+    // ===== 2. 遊學景點翻翻卡 =====
     const spots = [
-        { en: 'JEWEL CHANGI', zh: '星耀樟宜', img: 'spot-jewel.jpg', desc: '樟宜機場的地標，擁有全球最高的室內瀑布「雨漩渦」。學員觀察雨水循環用水與室內溫控設計，了解綠建築如何兼顧美感與環保。' },
         { en: 'NATIONAL MUSEUM', zh: '新加坡國家博物館', img: 'spot-illus-museum.jpg', desc: '新加坡歷史最悠久的博物館，以沉浸式展覽述說這座城市從漁村、貿易港到獨立國家的故事，認識城市發展脈絡。' },
         { en: 'LITTLE INDIA', zh: '小印度', img: 'spot-illus-little-india.jpg', desc: '色彩繽紛的印度文化街區，香料、花環與傳統小吃隨處可見。學員用英語與店家互動，體驗不同文化的生活樣貌。' },
         { en: 'ARAB STREET', zh: '阿拉伯街', img: 'spot-illus-arab-street.jpg', desc: '以金色圓頂的蘇丹回教堂為中心，保留馬來與阿拉伯文化的老街區，布料、香水與手工藝店林立，感受多元宗教與文化共存。' },
-        { en: 'DISCOVERY CENTRE', zh: '新加坡探索中心', img: 'spot-discovery.jpg', desc: '以互動展區介紹新加坡的過去、現在與未來，學員透過團隊任務認識國家如何面對挑戰、規劃城市。' },
         { en: 'SCIENCE CENTRE', zh: '新加坡科學館', img: 'spot-illus-science.jpg', desc: '舉世聞名的互動式科學展覽，從光影、聲音到能源，學員動手實驗、觀察現代科技如何融入日常生活。' },
         { en: 'LAU PA SAT', zh: '老巴剎小販市場', img: 'spot-illus-lau-pa-sat.jpg', desc: '維多利亞式鑄鐵建築的百年市場，匯集各國小販美食。學員自己點餐、付款，品嚐沙嗲、福建炒麵等在地風味。' },
-        { en: 'KOK FAH FARM', zh: 'Kok Fah 科技水耕農場', img: 'spot-kok-fah.jpg', desc: '新加坡土地有限，如何種出新鮮蔬菜？學員參觀現代水耕農場，並親手做青醬（Pesto），認識糧食自主與永續農業。' },
         { en: 'RAINFOREST WILD', zh: '雨林生態園', img: 'spot-rainforest.jpg', desc: '走進沉浸式熱帶雨林，穿越吊橋、瀑布與步道，探索生態系統與自然保育的重要性。' },
         { en: 'NIGHT SAFARI', zh: '夜間動物園', img: 'spot-illus-night-safari.jpg', desc: '全世界第一座夜間開放的動物園，在月光下觀察夜行性動物的生活，參加動物們的「月光派對」。' },
         { en: 'UNIVERSAL STUDIOS', zh: '新加坡環球影城', img: 'spot-illus-uss.jpg', desc: '盡情暢玩主題樂園，體驗各項遊樂設施，身臨其境探索電影場景與情節，是學員票選最愛的一天！' },
