@@ -426,6 +426,7 @@
                 <button id="btn-restart" type="button" class="ctrl-btn px-5 py-4 rounded-2xl bg-sunYellow text-inkBrown font-black text-base shadow-[4px_4px_0px_#3E2A24] cursor-pointer">↻ 重新開始</button>
                 <button id="btn-right" type="button" aria-label="向右移動" class="ctrl-btn flex-1 sm:flex-none sm:w-32 py-4 rounded-2xl bg-palmGreen text-white font-black text-2xl shadow-[4px_4px_0px_#3E2A24] active:translate-y-0.5 cursor-pointer">▶</button>
             </div>
+            <p class="mt-3 text-center text-xs text-inkBrown/55">魚尾獅圖示為公眾領域（<a class="underline" href="https://creativecommons.org/publicdomain/zero/1.0/deed.zh_TW" target="_blank" rel="noopener">CC0</a>）作品，來源：<a class="underline" href="https://commons.wikimedia.org/wiki/File:Singapore-1422836.svg" target="_blank" rel="noopener">Wikimedia Commons</a>（原載 Pixabay）</p>
         </div>
 
         <div class="card p-5">
@@ -484,16 +485,10 @@
         <div>
             <p class="section-kicker">GRADUATION 結業時刻</p>
             <h3 class="text-xl sm:text-2xl font-black text-lionRed mt-1">🎓 Camp Closing 結業典禮</h3>
-            <div class="mt-4 grid grid-cols-2 lg:grid-cols-4 gap-3">
-                <div class="photo col-span-2 row-span-2 aspect-[4/3] lg:aspect-auto"><img src="img/grad-07.jpg" alt="學員拿著結業證書與老師大合照" loading="lazy"></div>
-                <div class="photo aspect-[4/3]"><img src="img/grad-01.jpg" alt="學員領取結業證書" loading="lazy"></div>
-                <div class="photo aspect-[4/3]"><img src="img/grad-03.jpg" alt="學員領取結業證書" loading="lazy"></div>
-                <div class="photo aspect-[4/3]"><img src="img/grad-04.jpg" alt="學員領取結業證書" loading="lazy"></div>
-                <div class="photo aspect-[4/3]"><img src="img/grad-06.jpg" alt="學員領取結業證書" loading="lazy"></div>
-                <div class="photo aspect-[4/3]"><img src="img/grad-02.jpg" alt="學員領取結業證書" loading="lazy"></div>
-                <div class="photo aspect-[4/3]"><img src="img/grad-05.jpg" alt="學員領取結業證書" loading="lazy"></div>
-                <div class="photo col-span-2 aspect-[16/9]"><img src="img/grad-08.jpg" alt="全體學員在樟宜機場拉布條合影" loading="lazy"></div>
-            </div>
+            <figure class="mt-4 max-w-4xl mx-auto">
+                <div class="photo aspect-[16/9]"><img src="img/grad-08.jpg" alt="全體學員與老師在樟宜機場拉起營隊布條合影" loading="lazy"></div>
+                <figcaption class="mt-2 text-center text-sm text-inkBrown/70">全體學員與老師在樟宜機場拉起營隊布條，為這趟自信成長之旅劃下美好句點。</figcaption>
+            </figure>
         </div>
 
         <div>
@@ -731,6 +726,12 @@
         let bucket = { x: 400, w: 90, h: 46, speed: 620, vx: 0 };
         const keys = { left: false, right: false };
         let pointerX = null;
+        const merlionImg = new Image();
+        merlionImg.onload = () => { if (state !== 'running') draw(); };
+        merlionImg.src = 'img/merlion-sprite.png';
+        // 噴水口在精靈圖中的比例位置（右向魚尾獅的嘴）
+        const MOUTH_FX = 0.752, MOUTH_FY = 0.247;
+
 
         function resize() {
             const rect = canvas.getBoundingClientRect();
@@ -748,7 +749,17 @@
         // 難度：隨時間線性增加（0 → 1）
         const diff = () => Math.min(1, elapsed / DURATION);
         const level = () => Math.min(6, 1 + Math.floor(elapsed / 10));
-        const mouth = () => ({ x: W * 0.17 + 44, y: H * 0.36 });
+        function merlionBox() {
+            const nw = merlionImg.naturalWidth || 519, nh = merlionImg.naturalHeight || 900;
+            const sea = H * 0.66;
+            const h = Math.min(H * 0.70, W * 0.38 * (nh / nw));
+            const w = h * (nw / nh);
+            const x = Math.max(6, W * 0.012);
+            const y = sea - h * 0.92;
+            return { x, y, w, h, sea };
+        }
+        const mouth = () => { const b = merlionBox(); return { x: b.x + b.w * MOUTH_FX, y: b.y + b.h * MOUTH_FY }; };
+
 
         function spawn() {
             const m = mouth();
@@ -863,52 +874,24 @@
         }
 
         function drawMerlion(t, spraying) {
-            const bx = W * 0.17, by = H * 0.66;  // 基座中心
-            const s = Math.min(1.1, Math.max(0.7, H / 380));
-            ctx.save(); ctx.translate(bx, by); ctx.scale(s, s);
-            // 基座
-            ctx.fillStyle = '#C9B48E'; ctx.strokeStyle = '#3E2A24'; ctx.lineWidth = 3;
-            roundRect(-58, 0, 116, 34, 6); ctx.fill(); ctx.stroke();
-            // 魚身（鱗片）
-            ctx.fillStyle = '#FFFFFF';
-            ctx.beginPath();
-            ctx.moveTo(-34, 0); ctx.quadraticCurveTo(-48, -60, -10, -112);
-            ctx.lineTo(26, -108); ctx.quadraticCurveTo(40, -50, 34, 0); ctx.closePath();
-            ctx.fill(); ctx.stroke();
-            ctx.strokeStyle = 'rgba(62,159,184,.6)'; ctx.lineWidth = 2;
-            for (let r = 0; r < 4; r++) for (let c = 0; c < 3; c++) {
-                ctx.beginPath(); ctx.arc(-18 + c * 16 + (r % 2) * 8, -20 - r * 20, 7, 0, Math.PI); ctx.stroke();
+            const b = merlionBox();
+            if (merlionImg.complete && merlionImg.naturalWidth) {
+                ctx.save();
+                ctx.shadowColor = 'rgba(62,42,36,.22)';
+                ctx.shadowBlur = 14; ctx.shadowOffsetY = 5;
+                ctx.drawImage(merlionImg, b.x, b.y, b.w, b.h);
+                ctx.restore();
             }
-            // 魚尾
-            ctx.strokeStyle = '#3E2A24'; ctx.lineWidth = 3; ctx.fillStyle = '#FFFFFF';
-            ctx.beginPath(); ctx.moveTo(-36, -6); ctx.quadraticCurveTo(-70, -20, -62, -50); ctx.quadraticCurveTo(-54, -24, -30, -26); ctx.closePath(); ctx.fill(); ctx.stroke();
-            // 獅頭鬃毛
-            ctx.fillStyle = '#F5D46F';
-            ctx.beginPath(); ctx.arc(6, -132, 38, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
-            ctx.fillStyle = '#E8B64A';
-            for (let k = 0; k < 10; k++) {
-                const a = (k / 10) * Math.PI * 2;
-                ctx.beginPath(); ctx.arc(6 + Math.cos(a) * 34, -132 + Math.sin(a) * 34, 8, 0, Math.PI * 2); ctx.fill();
-            }
-            // 臉
-            ctx.fillStyle = '#FFFFFF'; ctx.strokeStyle = '#3E2A24';
-            ctx.beginPath(); ctx.ellipse(14, -130, 26, 23, 0, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
-            // 眼睛
-            ctx.fillStyle = '#3E2A24';
-            ctx.beginPath(); ctx.arc(16, -140, 3.5, 0, Math.PI * 2); ctx.fill();
-            // 嘴（張開噴水）
-            const open = spraying ? 6 + Math.sin(t * 20) * 1.5 : 3;
-            ctx.fillStyle = '#A8322D';
-            ctx.beginPath(); ctx.ellipse(36, -122, 8, open, 0, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
-            // 鼻子
-            ctx.fillStyle = '#3E2A24'; ctx.beginPath(); ctx.arc(38, -133, 3, 0, Math.PI * 2); ctx.fill();
-            ctx.restore();
-            // 噴水柱（裝飾）
             if (spraying) {
                 const m = mouth();
-                ctx.strokeStyle = 'rgba(127,211,234,.75)'; ctx.lineWidth = 6; ctx.lineCap = 'round';
+                const wobble = Math.sin(t * 6) * 5;
+                ctx.strokeStyle = 'rgba(127,211,234,.82)'; ctx.lineWidth = 7; ctx.lineCap = 'round';
                 ctx.beginPath(); ctx.moveTo(m.x, m.y);
-                ctx.quadraticCurveTo(m.x + 50, m.y - 30 + Math.sin(t * 6) * 4, m.x + 90, m.y - 6);
+                ctx.quadraticCurveTo(m.x + 56, m.y - 28 + wobble, m.x + 108, m.y + 2);
+                ctx.stroke();
+                ctx.strokeStyle = 'rgba(255,255,255,.45)'; ctx.lineWidth = 3;
+                ctx.beginPath(); ctx.moveTo(m.x + 4, m.y - 1);
+                ctx.quadraticCurveTo(m.x + 56, m.y - 30 + wobble, m.x + 100, m.y);
                 ctx.stroke();
                 ctx.lineCap = 'butt';
             }
