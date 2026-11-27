@@ -96,9 +96,28 @@
         .flip-front { background: #fff; padding: 10px 10px 0; box-shadow: 4px 4px 0 #F5D46F; display: flex; flex-direction: column; }
         .flip-front .pic { flex: 1; min-height: 0; border-radius: 12px; overflow: hidden; }
         .flip-front .pic img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
-        .flip-front .label { flex-shrink: 0; height: 4.35rem; display: flex; flex-direction: column; justify-content: center; }
-        .flip-back { transform: rotateY(180deg); background: #FDF0C8; padding: 20px; display: flex; flex-direction: column; box-shadow: 4px 4px 0 #2F7D5B; }
-        .stamp { position: absolute; top: 18px; right: 18px; background: #A8322D; color: #fff; font-size: 12px; font-weight: 900; padding: 2px 10px; border-radius: 999px; transform: rotate(6deg); }
+        .flip-front .label { flex-shrink: 0; height: 4.35rem; display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
+        .flip-front .label p { overflow-wrap: anywhere; word-break: break-word; }
+        .flip-back { transform: rotateY(180deg); background: #FDF0C8; padding: 20px; display: flex; flex-direction: column; box-shadow: 4px 4px 0 #2F7D5B; overflow: hidden; }
+        .flip-back p { overflow-wrap: anywhere; word-break: break-word; }
+        .flip-back .spot-en { font-size: 12px; font-weight: 900; letter-spacing: .12em; color: #2F7D5B; line-height: 1.25; }
+        .flip-back .spot-zh { font-size: 20px; font-weight: 900; color: #A8322D; line-height: 1.25; }
+        .flip-back .spot-desc { margin-top: 12px; font-size: 15px; line-height: 1.55; flex: 1; min-height: 0; }
+        .flip-back .spot-hint { margin-top: auto; font-size: 12px; color: rgba(62,42,36,.6); padding-top: 8px; }
+        .stamp { position: absolute; top: 18px; right: 18px; background: #A8322D; color: #fff; font-size: 12px; font-weight: 900; padding: 2px 10px; border-radius: 999px; transform: rotate(6deg); z-index: 1; }
+        @media (max-width: 640px) {
+            .flip-inner { aspect-ratio: 2 / 3; }
+            .flip-front { padding: 8px 8px 0; }
+            .flip-front .label { height: auto; min-height: 3.25rem; padding: 6px 2px 8px; overflow: visible; }
+            .flip-front .label p:first-child { font-size: 9px; letter-spacing: .06em; line-height: 1.2; }
+            .flip-front .label p:last-child { font-size: 13px; line-height: 1.25; }
+            .flip-back { padding: 10px 10px 8px; }
+            .flip-back .spot-en { font-size: 9px; letter-spacing: .05em; line-height: 1.2; }
+            .flip-back .spot-zh { font-size: 15px; line-height: 1.25; }
+            .flip-back .spot-desc { margin-top: 6px; font-size: 12px; line-height: 1.4; }
+            .flip-back .spot-hint { font-size: 10px; padding-top: 4px; }
+            .stamp { top: 10px; right: 10px; font-size: 10px; padding: 1px 7px; }
+        }
 
         /* 時間軸 */
         .tl-day { position: relative; }
@@ -289,14 +308,11 @@
             <p class="section-kicker">YOUR CAMP TEAM 帶團教師</p>
             <h2 class="text-2xl sm:text-3xl font-black text-lionRed mt-1">何嘉仁中、外籍教師</h2>
             <div class="mt-5 card card-pop p-5 sm:p-6">
-                <p class="font-black text-xl text-lionRed">何嘉仁中、外籍教師全程帶領</p>
-                <ul class="mt-2 space-y-1 text-[16px] list-disc pl-5">
+                <ul class="space-y-1 text-[16px] list-disc pl-5">
                     <li>由何嘉仁中籍與外籍教師共同帶團，全程陪伴與照護</li>
                     <li>以英語引導學員完成主題課、城市探索與跨文化互動</li>
-                    <li>進行歷史文化、科學科技、環境永續三堂主題課</li>
                 </ul>
             </div>
-            <div class="mt-4 rounded-2xl bg-lionRed text-white font-black text-center px-4 py-4 text-lg">帶團教師配置 (1:7)：何嘉仁中、外籍教師</div>
             <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div class="photo aspect-[4/3]"><img src="img/team-class-1.jpg" alt="學員上課情形" loading="lazy"></div>
                 <div class="photo aspect-[4/3]"><img src="img/team-class-3.jpg" alt="學員使用筆電進行 AI Workshop" loading="lazy"></div>
@@ -312,7 +328,6 @@
                 <ul class="mt-2 text-[15px] space-y-1 list-disc pl-5">
                     <li>位於市中心，交通便利、環境整潔新穎</li>
                     <li>師生同樓層住宿，提升管理與安全性</li>
-                    <li>房型無陽台設計，更加安心</li>
                     <li>館內設有空間，進行每日活動回顧與交流</li>
                 </ul>
             </div>
@@ -457,15 +472,15 @@
         <div>
             <p class="section-kicker">STUDENT VOICES 學員心聲</p>
             <div id="testimonials" class="mt-4 grid sm:grid-cols-2 lg:grid-cols-4 gap-4"></div>
-            <p class="mt-2 text-xs text-inkBrown/60">內容摘自 2026 新加坡自信成長營回饋問卷，僅標示英文名與分校。</p>
+            <p class="mt-2 text-xs text-inkBrown/60">內容摘自 2026 新加坡自信成長營回饋問卷，僅標示英文名。</p>
         </div>
 
         <div>
             <p class="section-kicker">GRADUATION 結業時刻</p>
             <h3 class="text-xl sm:text-2xl font-black text-lionRed mt-1">🎓 Camp Closing 結業典禮</h3>
             <figure class="mt-4 max-w-4xl mx-auto">
-                <div class="photo aspect-[16/9]"><img src="img/grad-08.jpg" alt="全體學員與老師在樟宜機場拉起營隊布條合影" loading="lazy"></div>
-                <figcaption class="mt-2 text-center text-sm text-inkBrown/70">全體學員與老師在樟宜機場拉起營隊布條，為這趟自信成長之旅劃下美好句點。</figcaption>
+                <div class="photo aspect-[4/3]"><img src="img/grad-closing-2026.jpg" alt="全體學員與老師在 Hess Academy 標誌前拉起 2026 營隊布條合影" loading="lazy"></div>
+                <figcaption class="mt-2 text-center text-sm text-inkBrown/70">全體學員與老師在 Hess Academy 標誌前拉起營隊布條，為這趟自信成長之旅劃下美好句點。</figcaption>
             </figure>
         </div>
 
@@ -603,10 +618,10 @@
                         <div class="label px-2"><p class="text-[10px] sm:text-xs font-black tracking-widest text-palmGreen leading-tight">${s.en}</p><p class="font-black text-[15px] sm:text-lg text-lionRed leading-tight">${s.zh}</p></div>
                     </div>
                     <div class="flip-face flip-back">
-                        <p class="text-xs font-black tracking-widest text-palmGreen">${s.en}</p>
-                        <p class="font-black text-xl text-lionRed">${s.zh}</p>
-                        <p class="mt-3 text-[15px] leading-relaxed">${s.desc}</p>
-                        <p class="mt-auto text-xs text-inkBrown/60">再點一下翻回正面 ↺</p>
+                        <p class="spot-en">${s.en}</p>
+                        <p class="spot-zh">${s.zh}</p>
+                        <p class="spot-desc">${s.desc}</p>
+                        <p class="spot-hint">再點一下翻回正面 ↺</p>
                     </div>
                 </div>
             </div>`).join('');
@@ -617,7 +632,7 @@
         });
     })();
 
-    // ===== 4. 學員心聲（2026 回饋問卷，只列英文名＋分校） =====
+    // ===== 4. 學員心聲（2026 回饋問卷，只列英文名） =====
     const voices = [
         { name: 'Blaire', branch: '新中壢分校', text: '獨自和不認識的人到海外遊學，很刺激，也讓我學習獨立和自信。有機會一定要參加，我也會推薦給兩位弟弟！' },
         { name: 'Annie', branch: '九如分校', text: '小印度 & 阿拉伯街文化體驗，能夠認識不同的文化，用英語去跟外國人溝通，我覺得很好玩，而且很有成就感 🤩' },
@@ -634,7 +649,7 @@
             <figure class="card card-pop p-5 flex flex-col">
                 <div class="flex items-center gap-3">
                     <div class="w-12 h-12 rounded-full ${colors[i % 4]} text-white font-black text-xl flex items-center justify-center shrink-0">${v.name[0]}</div>
-                    <figcaption><p class="font-black text-lionRed text-lg leading-tight">${v.name}</p><p class="text-sm text-inkBrown/70">${v.branch}</p></figcaption>
+                    <figcaption><p class="font-black text-lionRed text-lg leading-tight">${v.name}</p></figcaption>
                 </div>
                 <p class="text-sunYellow text-lg mt-2">★★★★★</p>
                 <blockquote class="text-[15px] mt-1">「${v.text}」</blockquote>
